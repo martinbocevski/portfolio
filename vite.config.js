@@ -7,7 +7,6 @@ dotenv.config();
 
 export default defineConfig({
   root: "src",
-  assetsInclude: ["**/*.gltf", "**/*.glb", "**/*.bin", "**/*.ktx2"],
   build: {
     emptyOutDir: true,
     assetsInlineLimit: 0,
