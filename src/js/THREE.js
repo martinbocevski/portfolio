@@ -1,6 +1,7 @@
 import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
+// import modelUrl from "../assets/three/logo/m-3d-logo.gltf";
 
 export const getTHREE = () => {
   let container;
@@ -65,7 +66,7 @@ export const getTHREE = () => {
     menuContainer.appendChild(menuRenderer.domElement);
 
     //Load Model
-    let loader = new GLTFLoader();
+    // let loader = new GLTFLoader();
     let logoLoader = new GLTFLoader();
     // console.log(loader);
     // loader.load("../assets/three/scene14.1.gltf", (gltf) => {
@@ -90,7 +91,7 @@ export const getTHREE = () => {
     //   animate();
     // });
 
-    logoLoader.load("../assets/three/logo/m-3d-logo.gltf", (gltf) => {
+    logoLoader.load("/models/m-3d-logo.gltf", (gltf) => {
       console.log(gltf);
 
       logo = gltf.scene.children[0]; // this is a Group
@@ -123,20 +124,20 @@ export const getTHREE = () => {
       scene.add(logo);
       animate();
     });
-    loader.load("../assets/three/low_polly_barrel.glb", (gltf) => {
-      // console.log(gltf.children[2]);
-      console.log(gltf.scene.children[0].children[0]);
-      // scene.add(gltf.scene);
-      folder = gltf.scene.children[0].children[0];
-      // console.log(logo);
-      folder.scale.set(-1.5, -1.5, -1.5);
-      folder.position.set(0, -2, 0);
-      folder.rotation.x += 1.5;
-      // folder.rotation.z += 0.2;
-      menuScene.add(folder);
+    // loader.load("../assets/three/low_polly_barrel.glb", (gltf) => {
+    //   // console.log(gltf.children[2]);
+    //   console.log(gltf.scene.children[0].children[0]);
+    //   // scene.add(gltf.scene);
+    //   folder = gltf.scene.children[0].children[0];
+    //   // console.log(logo);
+    //   folder.scale.set(-1.5, -1.5, -1.5);
+    //   folder.position.set(0, -2, 0);
+    //   folder.rotation.x += 1.5;
+    //   // folder.rotation.z += 0.2;
+    //   menuScene.add(folder);
 
-      animateMenu();
-    });
+    //   animateMenu();
+    // });
     // loaderFunction("../assets/three/folder.gltf");
     // loaderFunction("../assets/three/lightsaber/wanderers_lightsaber.gltf");
     // loaderFunction("../assets/three/gameboy/scene.gltf");
