@@ -141,6 +141,10 @@
     gap: 10px;
     z-index: 5;
 
+    @include for-tabletS {
+      bottom: 10%;
+    }
+
     svg {
       width: 100%;
       height: fit-content;
@@ -1354,6 +1358,7 @@
           height: fit-content;
           width: fit-content;
           position: relative;
+          touch-action: auto !important;
 
           .line-top {
             position: absolute;
@@ -1857,11 +1862,11 @@
       line-height: 1.4;
       color: #fff;
       text-transform: uppercase;
-      text-shadow: 0px 0px 10px #fff;
+      // text-shadow: 0px 0px 10px #fff;
 
       @include for-tabletS {
         font-size: 3rem;
-        text-shadow: 0px 0px 0px #fff;
+        // text-shadow: 0px 0px 0px #fff;
       }
     }
 
