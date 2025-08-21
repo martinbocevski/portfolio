@@ -92,7 +92,7 @@ export const getTHREE = () => {
     //   animate();
     // });
 
-    logoLoader.load("../../models/m-3d-logo.gltf", (gltf) => {
+    logoLoader.load("/models/m-3d-logo.gltf", (gltf) => {
       console.log(gltf);
 
       logo = gltf.scene.children[0]; // this is a Group

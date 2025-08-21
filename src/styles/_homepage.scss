@@ -381,6 +381,7 @@
         font-family: "FA-1", sans-serif;
         font-size: 4rem;
         font-weight: 400;
+        color: #fff;
         text-transform: uppercase;
         z-index: 2;
         text-shadow: 0px 0px 10px #fff;
@@ -502,7 +503,7 @@
     font-family: "FA-1", sans-serif;
     font-size: 4rem;
     text-transform: uppercase;
-    color: $primary-500;
+    color: #fff;
     text-shadow: 0px 0px 10px #fff;
     z-index: 2;
 
@@ -1143,7 +1144,7 @@
     font-family: "FA-1", sans-serif;
     font-size: 4rem;
     text-transform: uppercase;
-    color: $primary-500;
+    color: #fff;
     text-shadow: 0px 0px 10px #fff;
     z-index: 2;
 
@@ -1856,7 +1857,7 @@
       line-height: 1.4;
       color: #fff;
       text-transform: uppercase;
-      text-shadow: 0px 0px 10px #fff;
+      text-shadow: 0px 0px 5px #fff;
 
       @include for-tabletS {
         font-size: 3rem;

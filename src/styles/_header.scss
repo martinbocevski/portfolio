@@ -32,6 +32,7 @@
   .logo {
     height: 5.4rem;
     width: fit-content;
+    display: flex;
 
     @include for-tabletS {
       height: 4rem;
@@ -39,7 +40,7 @@
 
     img {
       height: 100%;
-      width: 100%;
+      width: fit-content;
       object-fit: contain;
     }
   }
@@ -66,6 +67,11 @@
     padding: 5px;
     border: 1px solid $primary-500;
     background-color: #000;
+
+    @include for-tabletS {
+      width: 80vw;
+      height: fit-content;
+    }
     .menu-modal-inner {
       width: 100%;
       height: 100%;
@@ -82,6 +88,10 @@
         justify-content: space-between;
         align-items: center;
         position: relative;
+
+        @include for-tabletS {
+          padding-block: 7px;
+        }
 
         button {
           position: absolute;
@@ -119,6 +129,13 @@
         display: grid;
         grid-template-columns: 30% 1fr;
         // column-gap: 150px;
+
+        @include for-tabletS {
+          grid-template-columns: 1fr;
+          height: fit-content;
+          gap: 2rem;
+          padding-inline: 2rem;
+        }
         .menu-links {
           list-style: none;
           height: 100%;
@@ -128,12 +145,20 @@
           justify-content: space-between;
           border-top: 1px solid $primary-500;
           border-bottom: 1px solid $primary-500;
-          border-right: 1px solid $primary-500;
+
+          @include for-tabletS {
+            gap: 2rem;
+            border-right: 0px solid $primary-500;
+          }
           .menu-anchor {
             width: 70%;
             text-decoration: none;
             border: 1px solid $primary-500;
             transition: 0.3s ease-in-out;
+
+            @include for-tabletS {
+              width: 100%;
+            }
             &:hover {
               background-color: $primary-500;
             }
@@ -165,6 +190,10 @@
             transform: translateY(-50%);
             height: 1px;
             background-color: $primary-500;
+
+            @include for-tabletS {
+              display: none;
+            }
           }
           .panel {
             width: 80%;
@@ -172,6 +201,10 @@
             border: 1px solid $primary-500;
             margin-left: auto;
             position: relative;
+
+            @include for-tabletS {
+              width: 100%;
+            }
             #crt {
               z-index: 1;
               display: grid;
@@ -184,6 +217,10 @@
                 gap: 2rem;
                 z-index: 2;
 
+                @include for-tabletS {
+                  width: 100%;
+                }
+
                 .social-link {
                   border: 1px solid $primary-500;
                   width: 15rem;
@@ -193,6 +230,9 @@
                   transition: 0.3s ease-in-out;
                   background-color: hsla(185, 100%, 93%, 0);
 
+                  @include for-tabletS {
+                    width: 100%;
+                  }
                   svg {
                     path {
                       transition: 0.3s ease-in-out;
