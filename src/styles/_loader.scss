@@ -1,0 +1,163 @@
+.loading-animation-container {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10;
+  background-color: $neutral-900;
+  display: grid;
+  place-items: center;
+  background-size: 30px 30px;
+  background-repeat: repeat;
+  background-position: 50%;
+  background-image: linear-gradient(
+      90deg,
+      hsla(185, 100%, 93%, 0.1) 1px,
+      transparent 0
+    ),
+    linear-gradient(180deg, hsla(185, 100%, 93%, 0.1) 1px, transparent 0);
+
+  .transition {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: $primary-500;
+    // display: none;
+    width: 0;
+    height: 0;
+    z-index: 3;
+  }
+
+  .frame {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 94vh;
+    width: 97vw;
+    border: 1px solid $primary-500;
+    z-index: 2;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+
+    @include for-tabletS {
+      padding: 2rem;
+      height: 97vh;
+    }
+
+    span {
+      font-family: $JetBrainsMono;
+      font-size: 1.2rem;
+      color: $primary-500;
+    }
+    .code-processor {
+      font-family: $JetBrainsMono;
+      font-size: 1.2rem;
+      color: $primary-500;
+      width: 170px;
+      line-height: 1.4;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(8, 9, 16, 1) 0%,
+      rgba(8, 9, 16, 0) 70%
+    );
+    z-index: 1;
+  }
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(
+      0deg,
+      rgba(8, 9, 16, 1) 0%,
+      rgba(8, 9, 16, 0) 70%
+    );
+    z-index: 1;
+  }
+
+  .main-disc-wrapper {
+    width: 45px;
+    height: 45px;
+    position: absolute;
+    bottom: 5rem;
+    right: 5rem;
+    transform: rotate(0deg);
+    opacity: 1;
+    animation: rotate 2s linear infinite;
+    z-index: 2;
+
+    @include for-tabletS {
+      right: 2rem;
+      bottom: 3rem;
+    }
+
+    svg {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      opacity: inherit;
+    }
+  }
+
+  .main-loader {
+    height: 16px;
+    width: 700px;
+    border: 1px solid $primary-500;
+    position: relative;
+    z-index: 2;
+
+    @include for-tabletS {
+      width: 90%;
+    }
+
+    @keyframes loading {
+      0% {
+        width: 0%;
+      }
+      100% {
+        width: 100%;
+      }
+    }
+    .loader-inner {
+      height: 100%;
+      background-color: $primary-500;
+    }
+
+    .leftInfo {
+      position: absolute;
+      left: 0;
+      bottom: -20px;
+      font-size: 14px;
+      font-family: $JetBrainsMono;
+    }
+    .rightInfo {
+      position: absolute;
+      right: 0;
+      bottom: -20px;
+      font-size: 14px;
+      font-family: $JetBrainsMono;
+      font-size: 14px;
+
+      .count::after {
+        font-size: 14px;
+        font-family: $JetBrainsMono;
+        content: counter(count);
+        animation: 12s ease-in-out counter infinite;
+        counter-reset: count 0;
+      }
+    }
+  }
+}

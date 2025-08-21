@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+
+    <title>Martin Bocevski Portfolio</title>
+
+    <!-- IMPORT FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Space+Grotesk:wght@300;400;500;600;700&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Oxanium:wght@200..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    {{>loader}} {{>header pathHome="." path="./pages" }}
+    <main>
+      <section class="hero_section">
+        <div class="scene"></div>
+        <figure class="lines-wrapper left-lines">
+          <img src="./assets/left-lines.png" alt="" />
+        </figure>
+        <figure class="lines-wrapper right-lines">
+          <img src="./assets/right-lines.png" alt="" />
+        </figure>
+        <svg
+          width="1919"
+          height="242"
+          viewBox="0 0 1919 242"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="animation-svg"
+        >
+          <path
+            d="M0.5 241.5H160H241.5V161H560.5V79.5H802.5V241.5H1121V161H1362.5V0.5H1442V79.5H1683V241.5H1919"
+            stroke="black"
+            class="animation-path"
+          />
+          <g class="gradient-line">
+            <rect width="5" height="1" fill="#DAFCFF" />
+          </g>
+        </svg>
+
+        <div class="heading">
+          <h1 class="hero-title"></h1>
+        </div>
+
+        <div class="scroll-down-indicator">
+          <svg
+            class="indicator-one"
+            width="19"
+            height="13"
+            viewBox="0 0 19 13"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path d="M19 0H0V5L8 13H11L19 5V0Z" fill="white" />
+          </svg>
+
+          <svg
+            class="indicator-two"
+            width="19"
+            height="13"
+            viewBox="0 0 19 13"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 0H0V5L8 13H11L19 5V0Z"
+              fill="white"
+              fill-opacity="0.5"
+            />
+          </svg>
+
+          <svg
+            class="indicator-three"
+            width="19"
+            height="13"
+            viewBox="0 0 19 13"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M19 0H0V5L8 13H11L19 5V0Z"
+              fill="white"
+              fill-opacity="0.5"
+            />
+          </svg>
+        </div>
+      </section>
+
+      <section class="section-one">
+        <div class="content">
+          <figure class="connector">
+            <svg
+              width="378"
+              height="53"
+              viewBox="0 0 378 53"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <line x1="179" y1="49.5" y2="49.5" stroke="#DAFCFF" />
+              <line x1="178.5" y1="49" x2="178.5" y2="3" stroke="#DAFCFF" />
+              <line x1="378" y1="3.5" x2="179" y2="3.5" stroke="#DAFCFF" />
+              <rect y="46" width="13" height="7" fill="#DAFCFF" />
+              <rect x="365" width="13" height="7" fill="#DAFCFF" />
+            </svg>
+          </figure>
+          <div class="folder-animation">
+            <div class="folder">
+              <div class="back">
+                <div class="back-inner"></div>
+              </div>
+              <div class="middle"></div>
+              <div class="front">
+                <div class="front-inner">
+                  <div>
+                    <span class="counter"></span>
+                    <span class="percent">%</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="loader">
+              <div class="loaderInner"></div>
+              <div class="leftInfo">Loading...</div>
+              <div class="rightInfo">(<span class="count"></span>%)</div>
+            </div>
+          </div>
+          <div class="description-block">
+            <h2 class="codeH"></h2>
+            <p class="description descAnim">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut
+              interdum ut felis nec feugiat. Donec mollis facilisis rhoncus. Nam
+              semper velit vitae mauris fermentum viverra. Nam commodo lorem
+              lectus, quis consectetur arcu tincidunt quis. Sed varius velit sit
+              amet velit placerat euismod. In bibendum condimentum mauris, non
+              vestibulum libero euismod eu.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-about" id="about">
+        <h2>Ab0ut</h2>
+        <div class="content">
+          <div class="window-container">
+            <div class="tab">
+              <span>Creator Info</span>
+              <span>creator.doc</span>
+            </div>
+
+            <div class="window-content">
+              <button class="click-me">
+                <figure class="icon-wrapper">
+                  <svg
+                    width="88"
+                    height="88"
+                    viewBox="0 0 88 88"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M80.605 50.6769L73.818 13.3503C73.5113 11.6612 72.6211 10.1335 71.303 9.03384C69.9848 7.93414 68.3223 7.33226 66.6057 7.33325H21.3957C19.6777 7.33315 18.0142 7.93619 16.6955 9.03719C15.3767 10.1382 14.4863 11.6672 14.1797 13.3576L7.39632 50.6769L7.46598 50.6879C7.42198 50.9079 7.33398 51.1059 7.33398 51.3333V69.6666C7.33398 73.7109 10.623 76.9999 14.6673 76.9999H73.334C77.3783 76.9999 80.6673 73.7109 80.6673 69.6666V51.3333C80.6673 51.1023 80.5793 50.9079 80.539 50.6879L80.605 50.6769ZM21.3957 14.6666H66.6093L72.6117 47.6666H15.3933L21.3957 14.6666ZM14.6673 69.6666V54.9999H73.334L73.3413 69.6666H14.6673Z"
+                      fill="white"
+                    />
+                    <path
+                      d="M62.334 58.6667H69.6673V66.0001H62.334V58.6667ZM51.334 58.6667H58.6673V66.0001H51.334V58.6667Z"
+                      fill="white"
+                    />
+                  </svg>
+                </figure>
+                click_me.exe
+              </button>
+            </div>
+          </div>
+
+          <div class="window-text">
+            <div class="tab">
+              <span>Creator</span>
+              <span>creator.txt</span>
+            </div>
+
+            <div class="window-content">
+              I am Martin Bocevski, a Developer with a soul that is lost in the
+              80s, who is also very passionate for 3D design and animation. I
+              like to create and design projects that can be greatly appealing
+              and separated from most of the things you see every day out there.
+              <br /><br />
+              I live in Skopje, the capital of Macedonia. I believe that a man
+              should look at any adversity as a welcome challenge. That being
+              said I like tackling tasks with a calm and open mind while I work.
+              <br /><br />
+              Working on group projects for me means collaborating with creative
+              minds and creating striking solutions for what the clients want
+              and the users need.
+            </div>
+          </div>
+          <div class="window-image">
+            <div class="tab">
+              <span>Creator</span>
+              <span>profile.img</span>
+            </div>
+
+            <div class="window-content">
+              <img src="./assets/DSC_6638.JPG" alt="" />
+            </div>
+          </div>
+          <div class="window-button">
+            <div class="tab">
+              <span>Creator</span>
+              <span>linkedin.exe</span>
+            </div>
+
+            <div class="window-content">
+              <a
+                href="https://www.linkedin.com/in/martin-bocevski-535328201/"
+                class="btn menuBtn"
+                target="_blank"
+              >
+                <span class="line-top"></span>
+                <span class="line-bottom"></span>
+                <div class="clip-body">
+                  <div class="border"></div>
+                  <span class="text">linkedin</span>
+                  <figure class="icon-wrapper">
+                    <svg
+                      width="24"
+                      height="24"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path d="M10 17L16 12L10 7V17Z" fill="#DAFCFF" />
+                      <rect
+                        x="3.5"
+                        y="3.5"
+                        width="17"
+                        height="17"
+                        stroke="#DAFCFF"
+                      />
+                    </svg>
+                  </figure>
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-two" id="projects">
+        <h2>Pr0jects</h2>
+
+        <div class="content">
+          <a href="./pages/euroconsumers.html" class="holo-card">
+            <div class="holo-name">[project.data]</div>
+            <div class="left-glow-piece"></div>
+            <div class="holo-card-body">
+              <div class="holo-card-border">
+                <div class="holo-card-inner">
+                  <img src="./assets/euro-hero.jpg" alt="" />
+                  <div class="overlay"></div>
+                </div>
+              </div>
+              <div class="holo-numbers">
+                <div class="number-main">Euroconsumers</div>
+                <div class="number-secondary">EX. 2559485770</div>
+              </div>
+              <div class="white-line"></div>
+            </div>
+          </a>
+          <a href="./pages/atv-dubrovnik.html" class="holo-card">
+            <div class="holo-name">[project.data]</div>
+            <div class="left-glow-piece"></div>
+            <div class="holo-card-body">
+              <div class="holo-card-border">
+                <div class="holo-card-inner">
+                  <img src="./assets/atv-buggy-hero.webp" alt="" />
+                  <div class="overlay"></div>
+                </div>
+              </div>
+              <div class="holo-numbers">
+                <div class="number-main">ATV Dubrovnik</div>
+                <div class="number-secondary">EX. 2559485770</div>
+              </div>
+              <div class="white-line"></div>
+            </div>
+          </a>
+          <a href="./pages/vidde.html" class="holo-card">
+            <div class="holo-name">[project.data]</div>
+            <div class="left-glow-piece"></div>
+            <div class="holo-card-body">
+              <div class="holo-card-border">
+                <div class="holo-card-inner">
+                  <img src="./assets/Vidde-cover.png" alt="" />
+                  <div class="overlay"></div>
+                </div>
+              </div>
+              <div class="holo-numbers">
+                <div class="number-main">Vidde</div>
+                <div class="number-secondary">EX. 2559485770</div>
+              </div>
+              <div class="white-line"></div>
+            </div>
+          </a>
+          <a href="./pages/vibefuel.html" class="holo-card">
+            <div class="holo-name">[project.data]</div>
+            <div class="left-glow-piece"></div>
+            <div class="holo-card-body">
+              <div class="holo-card-border">
+                <div class="holo-card-inner">
+                  <img src="./assets/vibe-hero.png" alt="" />
+                  <div class="overlay"></div>
+                </div>
+              </div>
+              <div class="holo-numbers">
+                <div class="number-main">Vibefuel</div>
+                <div class="number-secondary">EX. 2559485770</div>
+              </div>
+              <div class="white-line"></div>
+            </div>
+          </a>
+          <a href="./pages/sigrid.html" class="holo-card">
+            <div class="holo-name">[project.data]</div>
+            <div class="left-glow-piece"></div>
+            <div class="holo-card-body">
+              <div class="holo-card-border">
+                <div class="holo-card-inner">
+                  <img src="./assets/SIG-cover.png" alt="" />
+                  <div class="overlay"></div>
+                </div>
+              </div>
+              <div class="holo-numbers">
+                <div class="number-main">SIG</div>
+                <div class="number-secondary">EX. 2559485770</div>
+              </div>
+              <div class="white-line"></div>
+            </div>
+          </a>
+          <a href="./pages/rackbeat.html" class="holo-card">
+            <div class="holo-name">[project.data]</div>
+            <div class="left-glow-piece"></div>
+            <div class="holo-card-body">
+              <div class="holo-card-border">
+                <div class="holo-card-inner">
+                  <img src="./assets/Rackbeat-cover.png" alt="" />
+                  <div class="overlay"></div>
+                </div>
+              </div>
+              <div class="holo-numbers">
+                <div class="number-main">Rackbeat</div>
+                <div class="number-secondary">EX. 2559485770</div>
+              </div>
+              <div class="white-line"></div>
+            </div>
+          </a>
+          <a href="./pages/socially-powerful.html" class="holo-card">
+            <div class="holo-name">[project.data]</div>
+            <div class="left-glow-piece"></div>
+            <div class="holo-card-body">
+              <div class="holo-card-border">
+                <div class="holo-card-inner">
+                  <img src="./assets/socially-powerful-cover.png" alt="" />
+                  <div class="overlay"></div>
+                </div>
+              </div>
+              <div class="holo-numbers">
+                <div class="number-main">Socially Powerful</div>
+                <div class="number-secondary">EX. 2559485770</div>
+              </div>
+              <div class="white-line"></div>
+            </div>
+          </a>
+        </div>
+      </section>
+
+      <section class="section-skills">
+        <h2>Skills and <br />Techn0l0gies</h2>
+
+        <div class="cards">
+          <div class="card card-1">
+            <div class="card-body">
+              <div class="card-border">
+                <div class="card-inner">
+                  <img src="./assets/icons/react-icon.svg" alt="" />
+                </div>
+              </div>
+              <div class="holo-numbers">
+                <div class="number-main">React</div>
+                <!-- <div class="number-secondary">EX. 2559485770</div> -->
+              </div>
+            </div>
+          </div>
+          <div class="card card-2">
+            <div class="card-body">
+              <div class="card-border">
+                <div class="card-inner">
+                  <img src="./assets/icons/javascript-icon.svg" alt="" />
+                </div>
+              </div>
+              <div class="holo-numbers">
+                <div class="number-main">JavaScript</div>
+                <!-- <div class="number-secondary">EX. 2559485770</div> -->
+              </div>
+            </div>
+          </div>
+          <div class="card card-3">
+            <div class="card-body">
+              <div class="card-border">
+                <div class="card-inner">
+                  <img src="./assets/icons/typescript-icon.svg" alt="" />
+                </div>
+              </div>
+              <div class="holo-numbers">
+                <div class="number-main">TypeScript</div>
+                <!-- <div class="number-secondary">EX. 2559485770</div> -->
+              </div>
+            </div>
+          </div>
+          <div class="card card-4">
+            <div class="card-body">
+              <div class="card-border">
+                <div class="card-inner">
+                  <img src="./assets/icons/gsap-icon.svg" alt="" />
+                </div>
+              </div>
+              <div class="holo-numbers">
+                <div class="number-main">GSAP</div>
+                <!-- <div class="number-secondary">EX. 2559485770</div> -->
+              </div>
+            </div>
+          </div>
+          <div class="card card-5">
+            <div class="card-body">
+              <div class="card-border">
+                <div class="card-inner">
+                  <img src="./assets/icons/html-icon.svg" alt="" />
+                </div>
+              </div>
+              <div class="holo-numbers">
+                <div class="number-main">HTML</div>
+                <!-- <div class="number-secondary">EX. 2559485770</div> -->
+              </div>
+            </div>
+          </div>
+          <div class="card card-6">
+            <div class="card-body">
+              <div class="card-border">
+                <div class="card-inner">
+                  <img src="./assets/icons/css-icon.svg" alt="" />
+                </div>
+              </div>
+              <div class="holo-numbers">
+                <div class="number-main">CSS</div>
+                <!-- <div class="number-secondary">EX. 2559485770</div> -->
+              </div>
+            </div>
+          </div>
+          <div class="card card-7">
+            <div class="card-body">
+              <div class="card-border">
+                <div class="card-inner">
+                  <img src="./assets/icons/scss-icon.svg" alt="" />
+                </div>
+              </div>
+              <div class="holo-numbers">
+                <div class="number-main">SCSS</div>
+                <!-- <div class="number-secondary">EX. 2559485770</div> -->
+              </div>
+            </div>
+          </div>
+          <div class="card card-8">
+            <div class="card-body">
+              <div class="card-border">
+                <div class="card-inner">
+                  <img src="./assets/icons/tailwind-icon.svg" alt="" />
+                </div>
+              </div>
+              <div class="holo-numbers">
+                <div class="number-main">Tailwind</div>
+                <!-- <div class="number-secondary">EX. 2559485770</div> -->
+              </div>
+            </div>
+          </div>
+          <div class="card card-9">
+            <div class="card-body">
+              <div class="card-border">
+                <div class="card-inner">
+                  <img src="./assets/icons/wordpress-icon.svg" alt="" />
+                </div>
+              </div>
+              <div class="holo-numbers">
+                <div class="number-main">Wordpress</div>
+                <!-- <div class="number-secondary">EX. 2559485770</div> -->
+              </div>
+            </div>
+          </div>
+          <div class="card card-10">
+            <div class="card-body">
+              <div class="card-border">
+                <div class="card-inner">
+                  <img src="./assets/icons/php-icon.svg" alt="" />
+                </div>
+              </div>
+              <div class="holo-numbers">
+                <div class="number-main">PHP</div>
+                <!-- <div class="number-secondary">EX. 2559485770</div> -->
+              </div>
+            </div>
+          </div>
+          <div class="card card-11">
+            <div class="card-body">
+              <div class="card-border">
+                <div class="card-inner">
+                  <img src="./assets/icons/mysql-icon.svg" alt="" />
+                </div>
+              </div>
+              <div class="holo-numbers">
+                <div class="number-main">MySQL</div>
+                <!-- <div class="number-secondary">EX. 2559485770</div> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="card card-12">
+            <div class="card-body">
+              <div class="card-border">
+                <div class="card-inner">
+                  <img src="./assets/icons/node-icon.svg" alt="" />
+                </div>
+              </div>
+              <div class="holo-numbers">
+                <div class="number-main">NPM</div>
+                <!-- <div class="number-secondary">EX. 2559485770</div> -->
+              </div>
+            </div>
+          </div>
+
+          <div class="card card-13">
+            <div class="card-body">
+              <div class="card-border">
+                <div class="card-inner">
+                  <img src="./assets/icons/threejs-icon.svg" alt="" />
+                </div>
+              </div>
+              <div class="holo-numbers">
+                <div class="number-main">Three JS</div>
+                <!-- <div class="number-secondary">EX. 2559485770</div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section-contact" id="contact">
+        <div class="left-block">
+          <h2>C0ntact ME F0R ANY FUTURE PR0JECTS Y0U HAVE IN MIND</h2>
+
+          <p class="description">
+            Interested in a new project, a collaboration, or to discuss creative
+            ideas over coffee or a beer, just send me an email.
+          </p>
+
+          <a href="mailto:martinbocevski@gmail.com" class="btn menuBtn">
+            <span class="line-top"></span>
+            <span class="line-bottom"></span>
+            <div class="clip-body">
+              <div class="border"></div>
+              <span class="text">martinbocevski@gmail.com</span>
+              <figure class="icon-wrapper">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M10 17L16 12L10 7V17Z" fill="#DAFCFF" />
+                  <rect
+                    x="3.5"
+                    y="3.5"
+                    width="17"
+                    height="17"
+                    stroke="#DAFCFF"
+                  />
+                </svg>
+              </figure>
+            </div>
+          </a>
+        </div>
+        <figure class="right-block">
+          <img src="./assets/three-folders.svg" alt="" />
+        </figure>
+      </section>
+    </main>
+
+    {{>footer }}
+
+    <script type="module" src="./js/main.js"></script>
+  </body>
+</html>

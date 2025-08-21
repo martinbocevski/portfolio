@@ -1,0 +1,11 @@
+Model Information:
+* title:	Nintendo GameBoy Made In Blender(By Polygon MBW)
+* source:	https://sketchfab.com/3d-models/nintendo-gameboy-made-in-blenderby-polygon-mbw-bc556f98329b470abbae75556b533bc9
+* author:	PolygonMBW (https://sketchfab.com/PolygonMBW)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "Nintendo GameBoy Made In Blender(By Polygon MBW)" (https://sketchfab.com/3d-models/nintendo-gameboy-made-in-blenderby-polygon-mbw-bc556f98329b470abbae75556b533bc9) by PolygonMBW (https://sketchfab.com/PolygonMBW) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

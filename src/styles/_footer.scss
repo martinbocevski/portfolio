@@ -1,0 +1,310 @@
+footer {
+  width: 100%;
+  height: 60rem;
+  padding-inline: 12rem;
+  padding-block: 0 5rem;
+  background-size: 3rem 3rem;
+  background-repeat: repeat;
+  background-position: 50%;
+  background-image: linear-gradient(
+      90deg,
+      hsla(185, 100%, 93%, 0.1) 1px,
+      transparent 0
+    ),
+    linear-gradient(180deg, hsla(185, 100%, 93%, 0.1) 1px, transparent 0);
+  position: relative;
+  display: grid;
+  align-items: end;
+
+  @include for-tabletS {
+    padding-inline: 2rem;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(8, 9, 16, 1) 0%,
+      rgba(8, 9, 16, 0) 100%
+    );
+    z-index: 1;
+  }
+
+  .footer-inner {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    z-index: 3;
+
+    @include for-tabletS {
+      flex-direction: column;
+      gap: 5rem;
+    }
+
+    .mobile-logo {
+      display: none;
+      height: 12.2rem;
+
+      @include for-tabletS {
+        display: flex;
+        margin: 0 auto;
+        width: 50%;
+        height: 8rem;
+      }
+
+      img {
+        height: 100%;
+        width: 100%;
+        object-fit: contain;
+      }
+    }
+
+    .footer-nav {
+      width: 30rem;
+      height: fit-content;
+      border: 1px solid $primary-500;
+      padding: 0.5rem;
+      position: relative;
+
+      @include for-laptopL {
+        width: 40rem;
+      }
+
+      @include for-tabletS {
+        width: 100%;
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        height: 1px;
+        width: 100%;
+        top: -20px;
+        left: 0;
+        right: 0;
+        background-color: $primary-500;
+      }
+      .nav-headline {
+        width: 100%;
+        // height: 30px;
+        padding-block: 5px;
+        padding-inline: 10px;
+        border: 1px solid $primary-500;
+        font-family: $JetBrainsMono;
+        font-size: 1.4rem;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .nav-body {
+        width: 100%;
+        height: fit-content;
+        border: 1px solid $primary-500;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding-inline: 7px;
+        padding-block: 10px;
+
+        .footer-link {
+          border: 1px solid $primary-500;
+          padding: 8px 6px;
+          color: $primary-500;
+          transition: 0.3s ease-in-out;
+          font-size: 1.6rem;
+          &:hover {
+            color: #000;
+            background-color: $primary-500;
+          }
+        }
+
+        .active-foot-link {
+          color: #000;
+          background-color: $primary-500;
+        }
+      }
+    }
+
+    .right-block {
+      display: flex;
+      gap: 5rem;
+
+      @include for-laptopL {
+        gap: 2rem;
+      }
+      @include for-laptop {
+        flex-direction: column;
+        gap: 5rem;
+      }
+
+      @include for-tabletS {
+        width: 100%;
+      }
+
+      .social-block {
+        width: 30rem;
+        height: fit-content;
+        padding: 0.5rem;
+        font-family: $JetBrainsMono;
+        font-size: 1.4rem;
+        position: relative;
+        display: flex;
+        align-items: center;
+        // justify-content: space-between;
+        gap: 1rem;
+        border: 1px solid #fff;
+
+        @include for-laptopL {
+          width: 40rem;
+        }
+
+        @include for-laptop {
+          width: 50rem;
+        }
+
+        @include for-tabletS {
+          width: 100%;
+        }
+        &::before {
+          position: absolute;
+          content: "";
+          height: 1px;
+          width: 100%;
+          top: -20px;
+          left: 0;
+          right: 0;
+          background-color: $primary-500;
+        }
+
+        .social-inner {
+          border: 1px solid $primary-500;
+          padding-inline: 5px 10px;
+          padding-block: 5px;
+          display: flex;
+          gap: 1rem;
+          align-items: center;
+          justify-content: space-between;
+          width: 100%;
+        }
+
+        .social-link {
+          font-size: 1.4rem;
+          font-family: "JetBrains Mono", sans-serif;
+          font-weight: 400;
+          color: #fff;
+          padding: 0.5rem;
+
+          border-top-width: 50%;
+          border: 1px solid #fff;
+        }
+
+        .social-text {
+          margin-left: auto;
+          font-size: 1.4rem;
+          font-family: "JetBrains Mono", sans-serif;
+          font-weight: 400;
+          color: #fff;
+        }
+      }
+
+      .creator-block {
+        width: 30rem;
+        height: fit-content;
+        padding: 0.5rem;
+        border: 1px solid $primary-500;
+        font-family: $JetBrainsMono;
+        font-size: 1.4rem;
+        position: relative;
+
+        @include for-laptopL {
+          width: 40rem;
+        }
+
+        @include for-laptop {
+          width: 50rem;
+        }
+
+        @include for-tabletS {
+          width: 100%;
+        }
+        &::before {
+          position: absolute;
+          content: "";
+          height: 1px;
+          width: 100%;
+          top: -20px;
+          left: 0;
+          right: 0;
+          background-color: $primary-500;
+        }
+        .creator-inner {
+          border: 1px solid $primary-500;
+          padding-inline: 10px;
+          padding-block: 5px;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+      .copyright-block {
+        width: 30rem;
+        height: fit-content;
+        padding: 0.5rem;
+        border: 1px solid $primary-500;
+        font-family: $JetBrainsMono;
+        font-size: 1.4rem;
+        position: relative;
+
+        @include for-laptopL {
+          width: 40rem;
+        }
+        @include for-laptop {
+          width: 50rem;
+        }
+        @include for-tabletS {
+          width: 100%;
+        }
+        &::before {
+          position: absolute;
+          content: "";
+          height: 1px;
+          width: 100%;
+          top: -20px;
+          left: 0;
+          right: 0;
+          background-color: $primary-500;
+        }
+        .copyright-inner {
+          border: 1px solid $primary-500;
+          padding-inline: 10px;
+          padding-block: 5px;
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+
+      .logo {
+        height: 12.2rem;
+        position: absolute;
+        bottom: 8%;
+        right: 12rem;
+
+        @include for-tabletS {
+          position: relative;
+          bottom: auto;
+          right: auto;
+          margin: 0 auto 3rem;
+          display: none;
+        }
+
+        img {
+          height: 100%;
+          object-fit: contain;
+        }
+      }
+    }
+  }
+}

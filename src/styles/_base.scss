@@ -1,0 +1,171 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Jetbrains Mono", sans-serif;
+  overflow-x: hidden;
+  position: relative;
+
+  background: $neutral-900;
+  // background-size: 30px 30px;
+  // background-repeat: repeat;
+  // background-position: 50%;
+  // background-image: linear-gradient(
+  //     90deg,
+  //     hsla(185, 100%, 93%, 0.1) 1px,
+  //     transparent 0
+  //   ),
+  //   linear-gradient(180deg, hsla(185, 100%, 93%, 0.1) 1px, transparent 0);
+  color: #fff;
+
+  scroll-behavior: smooth;
+
+  ::selection {
+    background: $primary-500;
+    color: $neutral-900;
+  }
+
+  &::-webkit-scrollbar {
+    width: 4px;
+  }
+
+  &::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 6px hsl(0, 0%, 0%);
+    // border-radius: 50px;
+    // margin-bottom: 26px;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    // border-radius: 50px;
+    background-color: $primary-500;
+    box-shadow: 0 0 10px $primary-500;
+  }
+}
+
+*,
+::after,
+::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  position: relative;
+  -webkit-text-size-adjust: 100%;
+  line-height: 1.15;
+  height: 100%;
+  font-size: calc(100vw / 1920 * 10);
+
+  @media screen and (max-width: 768px) {
+    font-size: calc(100vw / 768 * 10);
+  }
+  @media screen and (max-width: 500px) {
+    font-size: calc(100vw / 500 * 10);
+  }
+  scroll-behavior: smooth;
+}
+main {
+  overflow: hidden !important;
+  height: 100%;
+  width: 100%;
+}
+
+//normalize
+b,
+strong {
+  font-weight: bolder;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  font-size: 100%;
+  line-height: 1.15;
+  margin: 0;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  appearance: button;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0;
+}
+
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText;
+}
+
+textarea {
+  overflow: auto;
+}
+
+[hidden] {
+  display: none;
+}
+
+img {
+  border-style: none;
+  max-width: 100%;
+  object-fit: contain;
+}
+
+figure {
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+label,
+a {
+  text-decoration: none;
+  margin: 0;
+  font-style: normal;
+}
+
+// vars
+// FONTS
+// $Cormorant: "Cormorant", serif;
+
+//colors
+
+// $primary-400: hsl(201, 96%, 58%);
+
+// $accnet-300: hsl(34, 100%, 82%);
+// $accnet-400: hsl(34, 98%, 65%);
+// $accnet-500: hsl(0, 90%, 60%);
+
+// $neutral-100: hsl(0, 0%, 100%);
+
+// $neutral-900: hsl(0, 0%, 0%);

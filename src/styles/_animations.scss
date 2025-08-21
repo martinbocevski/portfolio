@@ -1,0 +1,515 @@
+[data-animation="fade-in"] {
+  animation: 0.75s linear 0s 1 fade-in;
+}
+
+// keyframes
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes folderFront {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    left: 12%;
+    top: -14%;
+  }
+  40% {
+    visibility: visible;
+    left: 0%;
+    top: 0%;
+    opacity: 1;
+  }
+  99% {
+    visibility: visible;
+    opacity: 1;
+    left: 0%;
+    top: 0%;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@keyframes folderMiddle {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    left: 15%;
+    top: -17%;
+  }
+  50% {
+    visibility: visible;
+    left: 3%;
+    top: -5%;
+    opacity: 1;
+  }
+  75% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+@keyframes folderBack {
+  0% {
+    visibility: hidden;
+    opacity: 0;
+    left: 18%;
+    top: -22%;
+  }
+  50% {
+    visibility: visible;
+    left: 6%;
+    top: -10%;
+    opacity: 1;
+  }
+  75% {
+    visibility: hidden;
+    opacity: 0;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes counter {
+  0% {
+    counter-increment: count 0;
+  }
+  1% {
+    counter-increment: count 1;
+  }
+  2% {
+    counter-increment: count 2;
+  }
+  3% {
+    counter-increment: count 3;
+  }
+  4% {
+    counter-increment: count 4;
+  }
+  5% {
+    counter-increment: count 5;
+  }
+  6% {
+    counter-increment: count 6;
+  }
+  7% {
+    counter-increment: count 7;
+  }
+  8% {
+    counter-increment: count 8;
+  }
+  9% {
+    counter-increment: count 9;
+  }
+  10% {
+    counter-increment: count 10;
+  }
+  11% {
+    counter-increment: count 11;
+  }
+  12% {
+    counter-increment: count 12;
+  }
+  13% {
+    counter-increment: count 13;
+  }
+  14% {
+    counter-increment: count 14;
+  }
+  15% {
+    counter-increment: count 15;
+  }
+  16% {
+    counter-increment: count 16;
+  }
+  17% {
+    counter-increment: count 17;
+  }
+  18% {
+    counter-increment: count 18;
+  }
+  19% {
+    counter-increment: count 19;
+  }
+  20% {
+    counter-increment: count 20;
+  }
+  21% {
+    counter-increment: count 21;
+  }
+  22% {
+    counter-increment: count 22;
+  }
+  23% {
+    counter-increment: count 23;
+  }
+  24% {
+    counter-increment: count 24;
+  }
+  25% {
+    counter-increment: count 25;
+  }
+  26% {
+    counter-increment: count 26;
+  }
+  27% {
+    counter-increment: count 27;
+  }
+  28% {
+    counter-increment: count 28;
+  }
+  29% {
+    counter-increment: count 29;
+  }
+  30% {
+    counter-increment: count 30;
+  }
+  31% {
+    counter-increment: count 31;
+  }
+  32% {
+    counter-increment: count 32;
+  }
+  33% {
+    counter-increment: count 33;
+  }
+  34% {
+    counter-increment: count 34;
+  }
+  35% {
+    counter-increment: count 35;
+  }
+  36% {
+    counter-increment: count 36;
+  }
+  37% {
+    counter-increment: count 37;
+  }
+  38% {
+    counter-increment: count 38;
+  }
+  39% {
+    counter-increment: count 39;
+  }
+  40% {
+    counter-increment: count 40;
+  }
+  41% {
+    counter-increment: count 41;
+  }
+  42% {
+    counter-increment: count 42;
+  }
+  43% {
+    counter-increment: count 43;
+  }
+  44% {
+    counter-increment: count 44;
+  }
+  45% {
+    counter-increment: count 45;
+  }
+  46% {
+    counter-increment: count 46;
+  }
+  47% {
+    counter-increment: count 47;
+  }
+  48% {
+    counter-increment: count 48;
+  }
+  49% {
+    counter-increment: count 49;
+  }
+  50% {
+    counter-increment: count 50;
+  }
+  51% {
+    counter-increment: count 51;
+  }
+  52% {
+    counter-increment: count 52;
+  }
+  53% {
+    counter-increment: count 53;
+  }
+  54% {
+    counter-increment: count 54;
+  }
+  55% {
+    counter-increment: count 55;
+  }
+  56% {
+    counter-increment: count 56;
+  }
+  57% {
+    counter-increment: count 57;
+  }
+  58% {
+    counter-increment: count 58;
+  }
+  59% {
+    counter-increment: count 59;
+  }
+  60% {
+    counter-increment: count 60;
+  }
+  61% {
+    counter-increment: count 61;
+  }
+  62% {
+    counter-increment: count 62;
+  }
+  63% {
+    counter-increment: count 63;
+  }
+  64% {
+    counter-increment: count 64;
+  }
+  65% {
+    counter-increment: count 65;
+  }
+  66% {
+    counter-increment: count 66;
+  }
+  67% {
+    counter-increment: count 67;
+  }
+  68% {
+    counter-increment: count 68;
+  }
+  69% {
+    counter-increment: count 69;
+  }
+  70% {
+    counter-increment: count 70;
+  }
+  71% {
+    counter-increment: count 71;
+  }
+  72% {
+    counter-increment: count 72;
+  }
+  73% {
+    counter-increment: count 73;
+  }
+  74% {
+    counter-increment: count 74;
+  }
+  75% {
+    counter-increment: count 75;
+  }
+  76% {
+    counter-increment: count 76;
+  }
+  77% {
+    counter-increment: count 77;
+  }
+  78% {
+    counter-increment: count 78;
+  }
+  79% {
+    counter-increment: count 79;
+  }
+  80% {
+    counter-increment: count 80;
+  }
+  81% {
+    counter-increment: count 81;
+  }
+  82% {
+    counter-increment: count 82;
+  }
+  83% {
+    counter-increment: count 83;
+  }
+  84% {
+    counter-increment: count 84;
+  }
+  85% {
+    counter-increment: count 85;
+  }
+  86% {
+    counter-increment: count 86;
+  }
+  87% {
+    counter-increment: count 87;
+  }
+  88% {
+    counter-increment: count 88;
+  }
+  89% {
+    counter-increment: count 89;
+  }
+  90% {
+    counter-increment: count 90;
+  }
+  91% {
+    counter-increment: count 91;
+  }
+  92% {
+    counter-increment: count 92;
+  }
+  93% {
+    counter-increment: count 93;
+  }
+  94% {
+    counter-increment: count 94;
+  }
+  95% {
+    counter-increment: count 95;
+  }
+  96% {
+    counter-increment: count 96;
+  }
+  97% {
+    counter-increment: count 97;
+  }
+  98% {
+    counter-increment: count 98;
+  }
+  99% {
+    counter-increment: count 99;
+  }
+  100% {
+    counter-increment: count 100;
+  }
+}
+
+@keyframes blink {
+  0% {
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
+      0 0 20px rgba(255, 255, 255, 0.2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+  }
+  25% {
+    box-shadow: none;
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+  }
+  50% {
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
+      0 0 20px rgba(255, 255, 255, 0.2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+  }
+  65% {
+    box-shadow: none;
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+  }
+  75% {
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
+      0 0 20px rgba(255, 255, 255, 0.2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+  }
+  80% {
+    box-shadow: none;
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+  }
+  85% {
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
+      0 0 20px rgba(255, 255, 255, 0.2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+  }
+  90% {
+    box-shadow: none;
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+  }
+  100% {
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, 0.5),
+      0 0 20px rgba(255, 255, 255, 0.2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 15px;
+  }
+}
+@keyframes lineBlink {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 0;
+  }
+  75% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes codeBlink {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  65% {
+    opacity: 1;
+  }
+  75% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 0;
+  }
+  85% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes marquee {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(calc(-100% - 1rem));
+  }
+}

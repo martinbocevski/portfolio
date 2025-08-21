@@ -1,0 +1,90 @@
+// global classes used multiple times through the page
+
+//HEADINGS
+//PARAGRAPHS
+// CARDS
+// BUTTIONS
+// HERO
+// ...
+
+@mixin btn {
+  height: fit-content;
+  width: fit-content;
+  position: relative;
+
+  .line-top {
+    position: absolute;
+    height: 1px;
+    background: $primary-500;
+    top: -10%;
+    left: 5%;
+    right: 80%;
+    transition: 0.8s ease-in-out;
+  }
+  .line-bottom {
+    position: absolute;
+    height: 1px;
+    background: $primary-500;
+    bottom: -10%;
+    right: 5%;
+    left: 80%;
+    transition: 0.8s ease-in-out;
+  }
+
+  &:hover {
+    .line-top {
+      animation: lineBlink 0.4s linear forwards;
+    }
+    .line-bottom {
+      animation: lineBlink 0.4s linear forwards;
+    }
+  }
+
+  .clip-body {
+    color: $primary-500;
+    text-transform: uppercase;
+    padding: 1px;
+    background-color: $primary-500;
+    clip-path: polygon(0 0, 90% 0, 100% 30%, 100% 100%, 10% 100%, 0 70%);
+    position: relative;
+    transition: all 0.3s ease-in-out;
+
+    .text {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 10;
+      color: $primary-500;
+      font-style: normal;
+      transition: all 0.3s ease-in-out;
+      height: fit-content;
+      font-family: $JetBrainsMono;
+      font-size: 1.6rem;
+      text-transform: lowercase;
+    }
+
+    &:hover {
+      .border {
+        animation: blink 0.3s linear forwards;
+      }
+      .text {
+        font-weight: 500;
+      }
+    }
+
+    .border {
+      padding: 2rem 8.2rem;
+      clip-path: polygon(0 0, 90% 0, 100% 30%, 100% 100%, 10% 100%, 0 70%);
+      background-color: $neutral-900;
+      font-family: $JetBrainsMono;
+      transition: 0.3s ease-in-out;
+      color: $primary-500;
+    }
+  }
+}
+
+//Colors
+
+$primary-500: #dafcff;
+$neutral-900: #080910;

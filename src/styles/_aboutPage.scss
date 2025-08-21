@@ -1,0 +1,386 @@
+.about-hero_section {
+  padding-top: 155px;
+  width: 100%;
+  height: fit-content;
+  padding-inline: 120px;
+  margin-block: 0 200px;
+  background-size: 30px 30px;
+  background-repeat: repeat;
+  background-position: 50%;
+  background-image: linear-gradient(
+      90deg,
+      hsla(185, 100%, 93%, 0.1) 1px,
+      transparent 0
+    ),
+    linear-gradient(180deg, hsla(185, 100%, 93%, 0.1) 1px, transparent 0);
+  position: relative;
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    height: 100%;
+    width: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(8, 9, 16, 1) 0%,
+      rgba(8, 9, 16, 0) 100%
+    );
+    z-index: 1;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    // inset: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100px;
+    width: 100%;
+    background: linear-gradient(
+      0deg,
+      rgba(8, 9, 16, 1) 0%,
+      rgba(8, 9, 16, 0) 100%
+    );
+    z-index: 1;
+  }
+
+  .content {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    gap: 2%;
+    padding: 64px 0px;
+    position: relative;
+    z-index: 2;
+
+    .window-container {
+      width: 500px;
+      height: fit-content;
+      border: 1px solid $primary-500;
+      background-color: $neutral-900;
+      padding: 5px;
+      position: absolute;
+      inset: 50%;
+      transform: translate(-50%, -50%);
+      display: none;
+      .tab {
+        width: 100%;
+        height: fit-content;
+        padding-block: 8px;
+        padding-inline: 10px;
+        border: 1px solid $primary-500;
+        font-family: $JetBrainsMono;
+        font-size: 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .window-content {
+        width: 100%;
+        height: 250px;
+        border: 1px solid $primary-500;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .click-me {
+          border: none;
+          background-color: transparent;
+          color: $primary-500;
+          font-family: $JetBrainsMono;
+          cursor: pointer;
+          font-size: 16px;
+        }
+      }
+    }
+
+    .window-text {
+      width: 800px;
+      height: fit-content;
+      border: 1px solid $primary-500;
+      background-color: $neutral-900;
+      padding: 5px;
+      position: absolute;
+      top: 1%;
+      left: 35%;
+      // display: none;
+      z-index: 2;
+
+      .tab {
+        width: 100%;
+        height: fit-content;
+        padding-block: 8px;
+        padding-inline: 10px;
+        border: 1px solid $primary-500;
+        font-family: $JetBrainsMono;
+        font-size: 18px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .window-content {
+        width: 100%;
+        height: 500px;
+        border: 1px solid $primary-500;
+        overflow: hidden;
+        padding-block: 30px;
+        padding-inline: 60px 14px;
+        font-size: 18px;
+        font-family: $JetBrainsMono;
+      }
+    }
+
+    .window-image {
+      width: 300px;
+      height: fit-content;
+      border: 1px solid $primary-500;
+      background-color: $neutral-900;
+      padding: 5px;
+      position: absolute;
+      top: 2.5%;
+      left: 20%;
+      // display: none;
+      z-index: 2;
+      .tab {
+        width: 100%;
+        height: fit-content;
+        padding-block: 8px;
+        padding-inline: 10px;
+        border: 1px solid $primary-500;
+        font-family: $JetBrainsMono;
+        font-size: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .window-content {
+        width: 100%;
+        height: 500px;
+        border: 1px solid $primary-500;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: cover;
+        }
+      }
+    }
+
+    .window-button {
+      width: 350px;
+      height: fit-content;
+      border: 1px solid $primary-500;
+      background-color: $neutral-900;
+      padding: 5px;
+      position: absolute;
+      top: 63%;
+      left: 33%;
+      display: none;
+      .tab {
+        width: 100%;
+        height: fit-content;
+        padding-block: 8px;
+        padding-inline: 10px;
+        border: 1px solid $primary-500;
+        font-family: $JetBrainsMono;
+        font-size: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .window-content {
+        width: 100%;
+        height: 150px;
+        border: 1px solid $primary-500;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .btn {
+          @include btn;
+          .clip-body {
+            .border {
+              padding: 22px 90px;
+            }
+          }
+        }
+      }
+    }
+
+    .timeline {
+      width: 100%;
+      height: fit-content;
+      position: relative;
+      margin-block: 100px 0;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      row-gap: 100px;
+      padding-top: 700px;
+      padding-bottom: 20px;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 1px;
+        height: 100%;
+        background-color: $primary-500;
+        box-shadow: 0 0 10px #fff;
+      }
+
+      .block-container {
+        display: flex;
+        flex-direction: column;
+        gap: 44px;
+
+        .canvas-container {
+          width: 80%;
+          height: 600px;
+          border: 1px solid $primary-500;
+          background-color: $neutral-900;
+          position: relative;
+          overflow: hidden;
+
+          &::before {
+            position: absolute;
+            content: "";
+            left: 0;
+            top: 0;
+            right: 0;
+            background-color: $primary-500;
+            box-shadow: 0 0 10px #fff;
+            width: 100%;
+            height: 22px;
+            z-index: 2;
+          }
+
+          canvas {
+            width: 100% !important;
+            height: 100% !important;
+          }
+
+          .crt {
+            z-index: 1;
+            // display: none;
+          }
+          .crt::after {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: hsla(185, 100%, 93%, 0.1);
+            opacity: 0;
+            z-index: 1;
+            pointer-events: none;
+          }
+
+          .crt::before {
+            content: " ";
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(
+                hsla(185, 100%, 93%, 0) 51%,
+                hsla(185, 100%, 93%, 0.25) 49%
+              ),
+              linear-gradient(
+                90deg,
+                rgba(255, 0, 0, 0.06),
+                rgba(0, 255, 0, 0.02),
+                rgba(0, 0, 255, 0.06)
+              );
+            z-index: 1;
+            pointer-events: none;
+            background-size: 100% 3px, 4px 100%;
+          }
+        }
+      }
+
+      .timeline-window {
+        width: 50%;
+        height: fit-content;
+        border: 1px solid $primary-500;
+        background-color: $neutral-900;
+        padding: 5px;
+        position: relative;
+        .tab {
+          width: 100%;
+          height: fit-content;
+          padding-block: 8px;
+          padding-inline: 10px;
+          border: 1px solid $primary-500;
+          font-family: $JetBrainsMono;
+          font-size: 14px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        .window-content {
+          width: 100%;
+          height: fit-content;
+          border: 1px solid $primary-500;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding: 20px;
+
+          p {
+            font-size: 18px;
+          }
+        }
+      }
+
+      .timeline-window:nth-child(odd) {
+        margin-right: auto;
+        &::after {
+          position: absolute;
+          content: "";
+          height: 1px;
+          width: calc(100% + 3px);
+          background-color: $primary-500;
+          box-shadow: 0 0 15px #fff;
+          right: calc(-100% - 3px);
+          top: 50%;
+        }
+      }
+
+      .right-container {
+        .timeline-window {
+          margin-top: 500px;
+          margin-left: auto;
+          margin-right: 0;
+          &::after {
+            position: absolute;
+            content: "";
+            height: 1px;
+            width: calc(100% + 3px);
+            background-color: $primary-500;
+            box-shadow: 0 0 15px #fff;
+            left: calc(-100% - 3px);
+            top: 50%;
+          }
+        }
+
+        .canvas-container {
+          margin-left: auto;
+        }
+      }
+    }
+  }
+}

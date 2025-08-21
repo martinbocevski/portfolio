@@ -1,0 +1,88 @@
+.folder {
+  position: relative;
+  height: 200px;
+  width: 300px;
+
+  &:hover {
+    .middle {
+      left: 0;
+      top: 0;
+    }
+    .back {
+      left: 0;
+      top: 0;
+    }
+  }
+
+  .year {
+    position: absolute;
+    bottom: -10%;
+    left: 0;
+    color: $primary-500;
+    font-family: $JetBrainsMono;
+    font-size: 14px;
+    text-transform: uppercase;
+  }
+  .size {
+    position: absolute;
+    bottom: -10%;
+    right: 0%;
+    color: $primary-500;
+    font-family: $JetBrainsMono;
+    font-size: 14px;
+    // text-transform: uppercase;
+  }
+
+  .front {
+    clip-path: polygon(30% 0, 33% 6%, 100% 6%, 100% 100%, 0 100%, 0 0);
+    background-color: $primary-500;
+    height: 100%;
+    width: 100%;
+    padding: 1px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    .front-inner {
+      clip-path: polygon(30% 0, 33% 6%, 100% 6%, 100% 100%, 0 100%, 0 0);
+      background-color: $neutral-900;
+      height: 100%;
+      width: 100%;
+      display: grid;
+      place-items: center;
+      position: relative;
+
+      .project-name {
+        color: $primary-500;
+        font-family: $JetBrainsMono;
+        font-size: 30px;
+      }
+    }
+  }
+  .middle {
+    clip-path: polygon(30% 0, 33% 6%, 100% 6%, 100% 100%, 0 100%, 0 0);
+    background-color: $primary-500;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 3%;
+    top: -5%;
+    transition: 0.3s ease-in-out;
+  }
+  .back {
+    clip-path: polygon(30% 0, 33% 6%, 100% 6%, 100% 100%, 0 100%, 0 0);
+    background-color: $primary-500;
+    height: 100%;
+    width: 100%;
+    padding: 1px;
+    position: absolute;
+    left: 6%;
+    top: -10%;
+    transition: 0.6s ease-in-out;
+    .back-inner {
+      clip-path: polygon(30% 0, 33% 6%, 100% 6%, 100% 100%, 0 100%, 0 0);
+      background-color: $neutral-900;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

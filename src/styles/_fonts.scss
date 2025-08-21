@@ -1,0 +1,90 @@
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url($assetsPath + "/fonts/JetBrainsMono-Light.ttf");
+  font-weight: 300;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url($assetsPath + "/fonts/JetBrainsMono-LightItalic.ttf");
+  font-style: italic;
+  font-weight: 300;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url($assetsPath + "/fonts/JetBrainsMono-Book.ttf");
+  font-weight: 350;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url($assetsPath + "/fonts/JetBrainsMono-BookOblique.ttf");
+  font-style: italic;
+  font-weight: 350;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url($assetsPath + "/fonts/JetBrainsMono-Regular.ttf");
+  font-weight: 400;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url($assetsPath + "/fonts/JetBrainsMono-Italic.ttf");
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url($assetsPath + "/fonts/JetBrainsMono-Medium.ttf");
+  font-weight: 500;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url($assetsPath + "/fonts/JetBrainsMono-MediumItalic.ttf");
+  font-style: italic;
+  font-weight: 500;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url($assetsPath + "/fonts/JetBrainsMono-SemiBold.ttf");
+  font-weight: 600;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url($assetsPath + "/fonts/JetBrainsMono-SemiBoldItalic.ttf");
+  font-style: italic;
+  font-weight: 600;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url($assetsPath + "/fonts/JetBrainsMono-Bold.ttf");
+  font-weight: 700;
+  font-display: swap;
+}
+@font-face {
+  font-family: "JetBrainsMono";
+  src: url($assetsPath + "/fonts/JetBrainsMono-BoldItalic.ttf");
+  font-style: italic;
+  font-weight: 700;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "FA-1";
+  src: url($assetsPath + "/fonts/FA-1-Regular.otf");
+  font-weight: 400;
+  font-display: swap;
+}

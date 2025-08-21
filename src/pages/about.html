@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <!-- <link rel="icon" type="image/svg+xml" href="/vite.svg" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="noindex" />
+
+    <title>Starter</title>
+
+    <!-- IMPORT FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Roboto:wght@100;300;400;500;700;900&family=Space+Grotesk:wght@300;400;500;600;700&family=VT323&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    {{>loader}} {{>header pathHome=".." path="." }}
+
+    <section class="about-hero_section">
+      <div class="content">
+        <div class="window-container">
+          <div class="tab">
+            <span>Creator Info</span>
+            <span>creator.doc</span>
+          </div>
+
+          <div class="window-content">
+            <button class="click-me">
+              <figure class="icon-wrapper">
+                <svg
+                  width="88"
+                  height="88"
+                  viewBox="0 0 88 88"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M80.605 50.6769L73.818 13.3503C73.5113 11.6612 72.6211 10.1335 71.303 9.03384C69.9848 7.93414 68.3223 7.33226 66.6057 7.33325H21.3957C19.6777 7.33315 18.0142 7.93619 16.6955 9.03719C15.3767 10.1382 14.4863 11.6672 14.1797 13.3576L7.39632 50.6769L7.46598 50.6879C7.42198 50.9079 7.33398 51.1059 7.33398 51.3333V69.6666C7.33398 73.7109 10.623 76.9999 14.6673 76.9999H73.334C77.3783 76.9999 80.6673 73.7109 80.6673 69.6666V51.3333C80.6673 51.1023 80.5793 50.9079 80.539 50.6879L80.605 50.6769ZM21.3957 14.6666H66.6093L72.6117 47.6666H15.3933L21.3957 14.6666ZM14.6673 69.6666V54.9999H73.334L73.3413 69.6666H14.6673Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M62.334 58.6667H69.6673V66.0001H62.334V58.6667ZM51.334 58.6667H58.6673V66.0001H51.334V58.6667Z"
+                    fill="white"
+                  />
+                </svg>
+              </figure>
+              click_me.exe
+            </button>
+          </div>
+        </div>
+
+        <div class="window-text">
+          <div class="tab">
+            <span>Creator</span>
+            <span>creator.txt</span>
+          </div>
+
+          <div class="window-content">
+            I am a Developer and Designer with a soul that is lost in the 80s,
+            who is also very passionate for 3D design and animation. I like to
+            create and design projects that can be greatly appealing and
+            separated from most of the things you see every day out there.
+            <br /><br />
+            I live in Skopje, the capital of Macedonia. I believe that a man
+            should look at any adversity as a welcome challenge. That being said
+            I like tackling tasks with a calm and open mind while I work.
+            <br /><br />
+            Working on group projects for me means collaborating with creative
+            minds and creating striking solutions for what the clients want and
+            the users need.
+          </div>
+        </div>
+        <div class="window-image">
+          <div class="tab">
+            <span>Creator</span>
+            <span>profile.img</span>
+          </div>
+
+          <div class="window-content">
+            <img src="../assets/profile.png" alt="" />
+          </div>
+        </div>
+        <div class="window-button">
+          <div class="tab">
+            <span>Creator</span>
+            <span>about_page.exe</span>
+          </div>
+
+          <div class="window-content">
+            <a href="/" class="btn menuBtn">
+              <span class="line-top"></span>
+              <span class="line-bottom"></span>
+              <div class="clip-body">
+                <div class="border"></div>
+                <span class="text">about_me</span>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="timeline">
+          <div class="block-container">
+            <div class="timeline-window">
+              <div class="tab">
+                <span>Timeline_info</span>
+                <span>2020.data</span>
+              </div>
+
+              <div class="window-content">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                  adipisci, quasi perferendis voluptas quia commodi nisi.
+                </p>
+              </div>
+            </div>
+            <div class="canvas-container" id="disk">
+              <div class="crt"></div>
+            </div>
+          </div>
+
+          <div class="block-container right-container">
+            <div class="timeline-window">
+              <div class="tab">
+                <span>Timeline_info</span>
+                <span>2020.data</span>
+              </div>
+
+              <div class="window-content">
+                <p>
+                  Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
+                  adipisci, quasi perferendis voluptas quia commodi nisi sint
+                  iure obcaecati ad, eveniet nulla expedita quibusdam
+                  consectetur saepe nesciunt architecto ipsam officiis?
+                </p>
+              </div>
+            </div>
+            <div class="canvas-container" id="cube">
+              <div class="crt"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    {{>footer }}
+
+    <script type="module" src="../js/main.js"></script>
+  </body>
+</html>
