@@ -91,39 +91,42 @@ export const getTHREE = () => {
     //   animate();
     // });
 
-    logoLoader.load("/models/m-3d-logo.gltf", (gltf) => {
-      console.log(gltf);
+    logoLoader.load(
+      `${import.meta.env.VITE_BASE_URL}/models/m-3d-logo.gltf`,
+      (gltf) => {
+        console.log(gltf);
 
-      logo = gltf.scene.children[0]; // this is a Group
-      if (window.matchMedia("(max-width: 768px)").matches) {
-        // Mobile or tablet screen
-        logo.scale.set(1.5, 1.5, 1.5);
-        logo.position.set(0, 4, 0);
-      } else {
-        // Desktop screen
-        logo.scale.set(2.6, 2.6, 2.6);
-        logo.position.set(0, 3.5, 0);
-      }
-
-      // Traverse all children of the group to apply opacity to meshes
-      logo.traverse((child) => {
-        if (child.isMesh) {
-          // If no material exists, assign one
-          if (!child.material) {
-            child.material = new THREE.MeshStandardMaterial({
-              color: 0xffffff,
-              opacity: 0.2,
-            });
-          } else {
-            child.material.transparent = true;
-            child.material.opacity = 0.5;
-          }
+        logo = gltf.scene.children[0]; // this is a Group
+        if (window.matchMedia("(max-width: 768px)").matches) {
+          // Mobile or tablet screen
+          logo.scale.set(1.5, 1.5, 1.5);
+          logo.position.set(0, 4, 0);
+        } else {
+          // Desktop screen
+          logo.scale.set(2.6, 2.6, 2.6);
+          logo.position.set(0, 3.5, 0);
         }
-      });
 
-      scene.add(logo);
-      animate();
-    });
+        // Traverse all children of the group to apply opacity to meshes
+        logo.traverse((child) => {
+          if (child.isMesh) {
+            // If no material exists, assign one
+            if (!child.material) {
+              child.material = new THREE.MeshStandardMaterial({
+                color: 0xffffff,
+                opacity: 0.2,
+              });
+            } else {
+              child.material.transparent = true;
+              child.material.opacity = 0.5;
+            }
+          }
+        });
+
+        scene.add(logo);
+        animate();
+      }
+    );
     // loader.load("../assets/three/low_polly_barrel.glb", (gltf) => {
     //   // console.log(gltf.children[2]);
     //   console.log(gltf.scene.children[0].children[0]);

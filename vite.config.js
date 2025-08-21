@@ -1,6 +1,9 @@
 import { resolve } from "path";
 import { defineConfig } from "vite";
 import handlebars from "vite-plugin-handlebars";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 export default defineConfig({
   root: "src",
@@ -23,6 +26,9 @@ export default defineConfig({
       },
     },
     outDir: "../build",
+    define: {
+      __VALUE__: `"${process.env.VALUE}"`, // wrapping in "" since it's a string
+    },
   },
   plugins: [
     handlebars({
