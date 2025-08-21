@@ -31,16 +31,17 @@
   }
   .logo {
     height: 5.4rem;
-    width: fit-content;
+    width: 5.4rem;
     display: flex;
 
     @include for-tabletS {
       height: 4rem;
+      width: 4rem;
     }
 
     img {
       height: 100%;
-      width: fit-content;
+      width: 100%;
       object-fit: contain;
     }
   }
