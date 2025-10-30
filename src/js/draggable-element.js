@@ -10,6 +10,8 @@ export const getDraggableElement = (element, parent) => {
     Draggable.create(window, {
       type: "x, y",
       bounds: windowContainer,
+      dragClickables: true,
+      ignore: "a",
     });
   });
 };

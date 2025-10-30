@@ -2,7 +2,7 @@ import "../styles/style.scss";
 import Lenis from "lenis";
 import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger.js";
-import { getCube, getDisk, getTHREE } from "./THREE";
+import { getTHREE } from "./THREE";
 import { getCounter } from "./counter.js";
 import { getMenu } from "./menu.js";
 import { getDraggableElement } from "./draggable-element.js";
@@ -66,13 +66,6 @@ if (document.querySelector(".section-about")) {
   getDraggableElement(".window-text", ".section-about");
   getDraggableElement(".window-button", ".section-about");
   // getDraggableElement(".hero-three", ".hero_section");
-}
-
-if (document.querySelector(".about-hero_section")) {
-  getDisk();
-}
-if (document.querySelector(".about-hero_section")) {
-  getCube();
 }
 if (document.querySelector(".hero_section")) {
   getSVGLineAnimation();

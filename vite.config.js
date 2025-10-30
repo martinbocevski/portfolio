@@ -35,5 +35,5 @@ export default defineConfig({
       partialDirectory: resolve(__dirname, "src/partials"),
     }),
   ],
-  base: "/portfolio",
+  base: "/portfolio/",
 });

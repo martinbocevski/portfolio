@@ -3,6 +3,7 @@ import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
 // import modelUrl from "../assets/three/logo/m-3d-logo.gltf";
+import modelUrl from "../assets/three/logo/m-3d-logo.glb?url";
 // const modelUrl = `${import.meta.env.VITE_BASE_URL}/models/m-3d-logo.gltf`;
 // import modelUrl from "@/assets/three/logo/m-3d-logo.glb?url"; // ?url ensures a runtime URL
 
@@ -94,7 +95,7 @@ export const getTHREE = () => {
     //   animate();
     // });
 
-    logoLoader.load(`/models/m-3d-logo.gltf`, (gltf) => {
+    logoLoader.load(modelUrl, (gltf) => {
       console.log(gltf);
 
       logo = gltf.scene.children[0]; // this is a Group
@@ -182,128 +183,4 @@ export const getTHREE = () => {
   }
 
   window.addEventListener("resize", onWindowResize);
-};
-
-export const getDisk = () => {
-  const diskContainer = document.querySelector("#disk");
-  console.log(diskContainer);
-
-  const camera = new THREE.PerspectiveCamera(
-    75,
-    diskContainer.clientWidth / diskContainer.clientWidth,
-    0.1,
-    1000
-  );
-  // camera.position.z = 13;
-  // camera.position.set(0, 4, 30);
-
-  const scene = new THREE.Scene();
-  // scene.background = new THREE.Color(0x110011);
-  let disk;
-
-  // const geometry = new THREE.BoxGeometry(1, 1, 1);
-  // const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-  // const cube = new THREE.Mesh(geometry, material);
-  // scene.add(cube);
-
-  camera.position.z = 5;
-
-  const loader = new GLTFLoader();
-  loader.load(
-    "../assets/three/gameboy/scene.gltf",
-    function (gltf) {
-      disk = gltf.scenes[0].children[0];
-      disk.scale.setScalar(0.6);
-      disk.position.set(0, -2.3, 0);
-      // disk.rotation.z = "180";
-      // gltf.traverse(function (child) {
-      //   if (child.isMesh) {
-      //     gltf.material.wireframe = true;
-      //     disk.material.wireframeLinewidth = 2; // Optional
-      //     disk.material.wireframeLinecap = "round";
-      //     // ...
-      //   }
-      // });
-      scene.add(disk);
-
-      // camera.lookAt(disk.position);
-
-      console.log(gltf);
-    },
-    function (xhr) {},
-    function (error) {}
-  );
-
-  const renderer = new THREE.WebGLRenderer({ alpha: true });
-  renderer.setSize(diskContainer.clientWidth, diskContainer.clientWidth);
-  diskContainer.appendChild(renderer.domElement);
-
-  const ambientLight = new THREE.AmbientLight(0xdafcff, 1.5);
-  scene.add(ambientLight);
-  scene.add(new THREE.HemisphereLight(0xdafcff, 0xdafcff, 2.0));
-  // scene.add(new THREE.AxesHelper());
-
-  const reRender3D = () => {
-    requestAnimationFrame(reRender3D);
-
-    if (disk) disk.rotation.z += 0.01;
-    renderer.render(scene, camera);
-  };
-  reRender3D();
-};
-
-export const getCube = () => {
-  const cubeContainer = document.querySelector("#cube");
-  const scene = new THREE.Scene();
-  const camera = new THREE.PerspectiveCamera(
-    75,
-    cubeContainer.clientWidth / cubeContainer.clientWidth,
-    0.1,
-    1000
-  );
-
-  // scene.background = new THREE.Color(0x110011);
-  let cube;
-
-  // const geometry = new THREE.BoxGeometry(1, 1, 1);
-  // const material = new THREE.MeshBasicMaterial({ color: 0x00ff00 });
-  // const cube = new THREE.Mesh(geometry, material);
-  // scene.add(cube);
-
-  camera.position.z = 5;
-
-  const cubeLoader = new GLTFLoader();
-  cubeLoader.load(
-    "../assets/three/tron_disk.glb",
-    function (gltf) {
-      cube = gltf.scenes[0].children[0];
-      cube.scale.setScalar(1.5);
-      cube.position.set(0, -1, 0);
-      // disk.rotation.z = "180";
-      scene.add(cube);
-
-      // camera.lookAt(disk.position);
-
-      console.log(gltf);
-    },
-    function (xhr) {},
-    function (error) {}
-  );
-
-  const cubeRenderer = new THREE.WebGLRenderer({ alpha: true });
-  cubeRenderer.setSize(cubeContainer.clientWidth, cubeContainer.clientWidth);
-  cubeContainer.appendChild(cubeRenderer.domElement);
-
-  const ambientLight = new THREE.AmbientLight(0xffffff, 1.5);
-  scene.add(ambientLight);
-  scene.add(new THREE.HemisphereLight(0xdafcff, 0xdafcff, 2.0));
-  // scene.add(new THREE.AxesHelper());
-
-  const cubeRender3D = () => {
-    requestAnimationFrame(cubeRender3D);
-
-    if (cube) cube.rotation.z += 0.01;
-    cubeRenderer.render(scene, camera);
-  };
-  cubeRender3D();
 };
