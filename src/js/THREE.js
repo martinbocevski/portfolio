@@ -3,7 +3,7 @@ import * as THREE from "three";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { FBXLoader } from "three/examples/jsm/loaders/FBXLoader";
 // import modelUrl from "../assets/three/logo/m-3d-logo.gltf";
-import modelUrl from "../assets/three/logo/m-3d-logo.glb?url";
+import modelUrl from "../assets/three/logo/m-3d-logo-v1.glb?url";
 // const modelUrl = `${import.meta.env.VITE_BASE_URL}/models/m-3d-logo.gltf`;
 // import modelUrl from "@/assets/three/logo/m-3d-logo.glb?url"; // ?url ensures a runtime URL
 
