@@ -247,7 +247,8 @@
 
       .small-number {
         font-size: 1rem;
-        color: #52f1ff;
+        color: #52f1ff !important;
+        -webkit-text-fill-color: #52f1ff;
       }
     }
 
@@ -295,7 +296,8 @@
 
         .small-number {
           font-size: 1rem;
-          color: #52f1ff;
+          color: #52f1ff !important;
+          -webkit-text-fill-color: #52f1ff;
         }
       }
 
@@ -376,7 +378,8 @@
 
       .small-number {
         font-size: 1rem;
-        color: #52f1ff;
+        color: #52f1ff !important;
+        -webkit-text-fill-color: #52f1ff;
       }
     }
 

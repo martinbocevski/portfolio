@@ -9,7 +9,6 @@ import { getDraggableElement } from "./draggable-element.js";
 import {
   getAboutContent,
   getCardStacking,
-  getFAQ,
   getLoader,
   getSVGLineAnimation,
   scrollTypeText,
@@ -36,26 +35,23 @@ if (document.querySelector(".loading-animation-container")) {
   getLoader();
 }
 
-if (document.querySelector(".section-one")) {
-  scrollTypeText(
-    document.querySelector(".section-one"),
-    document.querySelector(".codeH"),
-    `C0nnecting <br/> Digital Fr0ntiers`
-  );
-  scrollTypeText(
-    document.querySelector(".section-one"),
-    document.querySelector(".descAnim"),
-    "I'm a Developer who loves turning ideas into interactive experiences. Whether it's building sleek interfaces or solving tough Frontend or even Backend puzzles, I’m all about creating things that connect people and technology in meaningful ways."
-  );
-}
+// if (document.querySelector(".section-one")) {
+//   scrollTypeText(
+//     document.querySelector(".section-one"),
+//     document.querySelector(".codeH"),
+//     `C0nnecting <br/> Digital Fr0ntiers`
+//   );
+//   scrollTypeText(
+//     document.querySelector(".section-one"),
+//     document.querySelector(".descAnim"),
+//     "I'm a Developer who loves turning ideas into interactive experiences. Whether it's building sleek interfaces or solving tough Frontend or even Backend puzzles, I’m all about creating things that connect people and technology in meaningful ways."
+//   );
+// }
 
 getMenu();
 if (document.querySelector(".hero_section")) {
   getTHREE();
-  // getDraggableElement();
 }
-// getCounter();
-getFAQ();
 
 if (document.querySelector(".section-about")) {
   getAboutContent();
@@ -65,7 +61,6 @@ if (document.querySelector(".section-about")) {
   getDraggableElement(".window-image", ".section-about");
   getDraggableElement(".window-text", ".section-about");
   getDraggableElement(".window-button", ".section-about");
-  // getDraggableElement(".hero-three", ".hero_section");
 }
 if (document.querySelector(".hero_section")) {
   getSVGLineAnimation();

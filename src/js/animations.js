@@ -132,49 +132,53 @@ export const getLoader = () => {
       "-=1.5"
     );
 
-    mm.add("(min-width: 769px)", () => {
-      // desktop setup code here...
-      tl.to(
-        leftLines,
-        {
-          left: "12rem",
-          duration: 2,
-          ease: "power2.inOut",
-        },
-        "-=2"
-      );
-      tl.to(
-        rightLines,
-        {
-          right: "12rem",
-          duration: 2,
-          ease: "power2.inOut",
-        },
-        "-=2"
-      );
-    });
+    if (leftLines) {
+      mm.add("(min-width: 769px)", () => {
+        // desktop setup code here...
+        tl.to(
+          leftLines,
+          {
+            left: "12rem",
+            duration: 2,
+            ease: "power2.inOut",
+          },
+          "-=2"
+        );
+        tl.to(
+          rightLines,
+          {
+            right: "12rem",
+            duration: 2,
+            ease: "power2.inOut",
+          },
+          "-=2"
+        );
+      });
+    }
 
-    mm.add("(max-width: 768px)", () => {
-      // mobile setup code here...
-      tl.to(
-        leftLines,
-        {
-          left: "2rem",
-          duration: 2,
-          ease: "power2.inOut",
-        },
-        "-=2"
-      );
-      tl.to(
-        rightLines,
-        {
-          right: "2rem",
-          duration: 2,
-          ease: "power2.inOut",
-        },
-        "-=2"
-      );
-    });
+    if (leftLines) {
+      mm.add("(max-width: 768px)", () => {
+        // mobile setup code here...
+        tl.to(
+          leftLines,
+          {
+            left: "2rem",
+            duration: 2,
+            ease: "power2.inOut",
+          },
+          "-=2"
+        );
+        tl.to(
+          rightLines,
+          {
+            right: "2rem",
+            duration: 2,
+            ease: "power2.inOut",
+          },
+          "-=2"
+        );
+      });
+    }
     // tl.to(
     //   ".scene",
     //   {
@@ -186,11 +190,13 @@ export const getLoader = () => {
     //   "+=1"
     // );
 
-    tl.to(heroTitle, {
-      text: heroTitleText,
-      duration: 2,
-      ease: "none",
-    }); // overlaps typing with counter animation
+    if (heroTitle) {
+      tl.to(heroTitle, {
+        text: heroTitleText,
+        duration: 2,
+        ease: "none",
+      }); // overlaps typing with counter animation
+    }
 
     if (loadedMesh) {
       tl.to(loadedMesh.scale, {
