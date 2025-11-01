@@ -187,6 +187,10 @@
   height: fit-content;
   margin-block: 12rem;
 
+  @include for-tabletS {
+    height: 100vh;
+  }
+
   .content {
     display: grid;
     grid-template-columns: 35% 1fr;
@@ -392,6 +396,7 @@
 
         @include for-tabletS {
           font-size: 3rem;
+          text-shadow: 0px 0px 0px #fff;
         }
       }
 
@@ -513,6 +518,7 @@
 
     @include for-tabletS {
       font-size: 3rem;
+      text-shadow: 0px 0px 0px #fff;
     }
   }
 
@@ -1154,6 +1160,7 @@
 
     @include for-tabletS {
       font-size: 3rem;
+      text-shadow: 0px 0px 0px #fff;
     }
   }
   .content {
@@ -1537,6 +1544,7 @@
 
     @include for-tabletS {
       font-size: 3rem;
+      text-shadow: 0px 0px 0px #fff;
     }
   }
 
