@@ -8,6 +8,8 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 // import { ScrollTrigger } from "gsap/all";
 import { SplitText } from "gsap/all";
 
+import euroHeroImg from "../assets/euro-hero.jpg";
+
 gsap.registerPlugin(
   MotionPathPlugin,
   TextPlugin,
@@ -334,7 +336,7 @@ export const getGSAPSlider = () => {
       title: "Euroconsumers",
       description:
         "Euroconsumers is a leading, independent, multinational consumer organization representing over 6 million people across Belgium, Italy, Portugal, Spain, and Brazil. It unites national consumer groups to defend consumer rights, provide innovative information/services, and promote fair, sustainable markets.",
-      image: "/src/assets/euro-hero.jpg",
+      image: euroHeroImg,
       page: "/portfolio/pages/euroconsumers.html",
     },
     {
