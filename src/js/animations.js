@@ -334,7 +334,7 @@ export const getGSAPSlider = () => {
       title: "Euroconsumers",
       description:
         "Euroconsumers is a leading, independent, multinational consumer organization representing over 6 million people across Belgium, Italy, Portugal, Spain, and Brazil. It unites national consumer groups to defend consumer rights, provide innovative information/services, and promote fair, sustainable markets.",
-      image: "/portfolio/src/assets/euro-hero.jpg",
+      image: "./assets/euro-hero.jpg",
       page: "/portfolio/pages/euroconsumers.html",
     },
     {
