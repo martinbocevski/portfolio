@@ -407,7 +407,8 @@
         z-index: 2;
 
         @include for-tabletS {
-          font-size: 1.6rem;
+          font-size: 2.2rem;
+          line-height: 1.4;
         }
       }
     }
@@ -590,7 +591,7 @@
         letter-spacing: 0.07rem;
 
         @include for-tabletS {
-          font-size: 1.8rem;
+          font-size: 2rem;
         }
       }
     }
@@ -625,7 +626,7 @@
           text-transform: lowercase;
 
           @include for-tabletS {
-            font-size: 1.8rem;
+            font-size: 2rem;
           }
         }
 
@@ -660,6 +661,10 @@
           font-family: $Rajdhani;
           transition: 0.3s ease-in-out;
           color: $primary-500;
+
+          @include for-tabletS {
+            padding: 2.4rem 9rem;
+          }
         }
       }
     }
@@ -671,6 +676,11 @@
     right: 2rem;
     transform: translateY(-50%);
     z-index: 2;
+
+    @include for-tabletS {
+      top: 35%;
+      transform: translateY(-35%);
+    }
   }
 
   .slider-indices {
@@ -1285,9 +1295,9 @@
         line-height: 1.2;
 
         @include for-tabletS {
-          padding-inline: 3rem;
+          padding-inline: 2rem;
           height: fit-content;
-          font-size: 2rem;
+          font-size: 2.2rem;
           line-height: 1.4;
         }
       }
@@ -1415,9 +1425,6 @@
       }
 
       @include for-tabletS {
-        // left: auto;
-        // right: -1%;
-        // top: 70%;
         width: 100%;
         inset: unset;
         position: relative;
@@ -1439,34 +1446,6 @@
           width: fit-content;
           position: relative;
           touch-action: auto !important;
-
-          .line-top {
-            position: absolute;
-            height: 1px;
-            background: $primary-500 !important;
-            top: -10%;
-            left: 5%;
-            right: 80%;
-            transition: 0.8s ease-in-out;
-          }
-          .line-bottom {
-            position: absolute;
-            height: 1px;
-            background: $primary-500 !important;
-            bottom: -10%;
-            right: 5%;
-            left: 80%;
-            transition: 0.8s ease-in-out;
-          }
-
-          &:hover {
-            .line-top {
-              animation: lineBlink 0.4s linear forwards;
-            }
-            .line-bottom {
-              animation: lineBlink 0.4s linear forwards;
-            }
-          }
 
           .clip-body {
             color: $primary-500;
@@ -1498,6 +1477,10 @@
               letter-spacing: 0.07rem;
               font-size: 1.8rem;
               text-transform: lowercase;
+
+              @include for-tabletS {
+                font-size: 2rem;
+              }
             }
 
             .icon-wrapper {
@@ -1538,6 +1521,10 @@
               font-family: $JetBrainsMono;
               transition: 0.3s ease-in-out;
               color: $primary-500;
+
+              @include for-tabletS {
+                padding: 2.6rem 10rem;
+              }
             }
           }
         }
@@ -1568,6 +1555,7 @@
     flex-direction: column;
     justify-content: flex-start;
     align-items: flex-start;
+    overflow: unset;
   }
 
   &::after {

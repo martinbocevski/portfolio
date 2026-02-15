@@ -9,6 +9,13 @@ import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
 import { SplitText } from "gsap/all";
 
 import euroHeroImg from "../assets/euro-hero.jpg";
+import vibefuelHeroImg from "../assets/vibe-hero.png";
+import tat2HeroImg from "../assets/tat2-spirits-cover.png";
+import rackbeatHeroImg from "../assets/Rackbeat-cover.png";
+import viddeHeroImg from "../assets/Vidde-cover.png";
+import atvHeroImg from "../assets/atv-buggy-hero.webp";
+import sigridHeroImg from "../assets/SIG-cover.png";
+import sociallyHeroImg from "../assets/socially-powerful-cover.png";
 
 gsap.registerPlugin(
   MotionPathPlugin,
@@ -343,49 +350,49 @@ export const getGSAPSlider = () => {
       title: "Vibefuel",
       description:
         "VibeFuel is a brand of plant-based, vegan nootropic supplements designed to enhance focus, energy, and cognitive performance.",
-      image: "../assets/vibe-hero.png",
+      image: vibefuelHeroImg,
       page: "/portfolio/pages/vibefuel.html",
     },
     {
       title: "TAT2 Spirits",
       description:
         "TAT2 Spirits is a New York-based brand offering premium, ready-to-drink (RTD) cocktails, primarily known for its sugar-free Kentucky Bourbon Old Fashioned.",
-      image: "../assets/tat2-spirits-cover.png",
+      image: tat2HeroImg,
       page: "/portfolio/pages/tat2-spirits.html",
     },
     {
       title: "Rackbeat",
       description:
         "Rackbeat is a cloud-based warehouse management system (WMS) and inventory management platform designed for small-to-medium-sized businesses (SMBs) in the Nordics.",
-      image: "../assets/Rackbeat-cover.png",
+      image: rackbeatHeroImg,
       page: "/portfolio/pages/rackbeat.html",
     },
     {
       title: "Vidde",
       description:
         "Vidde (Vidde Mobility) is a Swedish company that has developed the world's first circular electric snowmobile, known as the Alfa.",
-      image: "../assets/Vidde-cover.png",
+      image: viddeHeroImg,
       page: "/portfolio/pages/vidde.html",
     },
     {
       title: "ATV Dubrovnik",
       description:
         "ATV Dubrovnik is offering guided all-terrain vehicle (quad bike) safari tours in the countryside surrounding Dubrovnik, Croatia.",
-      image: "../assets/atv-buggy-hero.webp",
+      image: atvHeroImg,
       page: "/portfolio/pages/atv-dubrovnik.html",
     },
     {
       title: "SIGRID",
       description:
         "Sigrid is a software assurance and quality analysis platform developed by the Software Improvement Group (SIG) to evaluate, monitor, and improve source code quality, security, and maintainability.",
-      image: "../assets/SIG-cover.png",
+      image: sigridHeroImg,
       page: "/portfolio/pages/sigrid.html",
     },
     {
       title: "Socially Powerful",
       description:
         "Socially Powerful is a global, data-driven influencer marketing and social agency founded in 2017 with offices in London, New York, Dubai, and Beijing.",
-      image: "../assets/socially-powerful-cover.png",
+      image: sociallyHeroImg,
       page: "/portfolio/pages/socially-powerful.html",
     },
   ];
