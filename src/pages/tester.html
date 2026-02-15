@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
 
-    <title>Starter</title>
+    <title>Martin Bocevski Portfolio</title>
 
     <!-- IMPORT FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -24,49 +24,302 @@
     />
   </head>
   <body>
-    <div class="tester-loading-animation-container">
-      <div class="container">
-        <div class="main-loader">
-          <div class="loader-inner"></div>
-          <div class="leftInfo">Loading...</div>
-          <div class="rightInfo">(<span class="count-loading"></span>%)</div>
+    {{>loader}} {{>header pathHome=".." path="./" }}
+    <main>
+      <section class="hero_section">
+        <div class="scene"></div>
+        <figure class="lines-wrapper left-lines">
+          <img src="../assets/left-lines.png" alt="" />
+        </figure>
+        <figure class="lines-wrapper right-lines">
+          <img src="../assets/right-lines.png" alt="" />
+        </figure>
+        <svg
+          width="1919"
+          height="242"
+          viewBox="0 0 1919 242"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+          class="animation-svg"
+        >
+          <path
+            d="M0.5 241.5H160H241.5V161H560.5V79.5H802.5V241.5H1121V161H1362.5V0.5H1442V79.5H1683V241.5H1919"
+            stroke="black"
+            class="animation-path"
+          />
+          <g class="gradient-line">
+            <rect width="5" height="1" fill="#DAFCFF" />
+          </g>
+        </svg>
+
+        <div class="heading">
+          <h1 class="hero-title"></h1>
         </div>
 
-        <figure class="disc-wrapper">
+        <div class="scroll-down-indicator">
           <svg
-            width="100"
-            height="100"
-            viewBox="0 0 100 100"
+            class="indicator-one"
+            width="19"
+            height="13"
+            viewBox="0 0 19 13"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <circle cx="50" cy="50" r="49.5" stroke="white" />
+            <path d="M19 0H0V5L8 13H11L19 5V0Z" fill="white" />
           </svg>
-        </figure>
-        <figure class="disc-wrapper">
+
           <svg
-            width="100"
-            height="100"
-            viewBox="0 0 100 100"
+            class="indicator-two"
+            width="19"
+            height="13"
+            viewBox="0 0 19 13"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <circle cx="50" cy="50" r="49.5" stroke="white" />
+            <path
+              d="M19 0H0V5L8 13H11L19 5V0Z"
+              fill="white"
+              fill-opacity="0.5"
+            />
           </svg>
-        </figure>
-        <figure class="disc-wrapper">
+
           <svg
-            width="100"
-            height="100"
-            viewBox="0 0 100 100"
+            class="indicator-three"
+            width="19"
+            height="13"
+            viewBox="0 0 19 13"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
           >
-            <circle cx="50" cy="50" r="49.5" stroke="white" />
+            <path
+              d="M19 0H0V5L8 13H11L19 5V0Z"
+              fill="white"
+              fill-opacity="0.5"
+            />
           </svg>
+        </div>
+      </section>
+
+      <section class="section-bento-test">
+        <div class="window-block">
+          <div class="left-block">
+            <div class="window-text">
+              <div class="tab">
+                <span>Creator</span>
+                <span>creator.txt</span>
+              </div>
+
+              <div class="window-content">
+                I am Martin Bocevski, a Developer with a soul that is lost in
+                the 80s, who is also very passionate for 3D design and
+                animation. I like to create and design projects that can be
+                greatly appealing and separated from most of the things you see
+                every day out there.
+                <br /><br />
+                I live in Skopje, the capital of Macedonia. I believe that a man
+                should look at any adversity as a welcome challenge. That being
+                said I like tackling tasks with a calm and open mind while I
+                work.
+                <br /><br />
+                Working on group projects for me means collaborating with
+                creative minds and creating striking solutions for what the
+                clients want and the users need.
+              </div>
+            </div>
+          </div>
+
+          <div class="right-block">
+            <div class="window-image">
+              <div class="tab">
+                <span>Creator</span>
+                <span>profile.img</span>
+              </div>
+
+              <div class="window-content">
+                <img src="../assets/DSC_6638.JPG" alt="" />
+              </div>
+            </div>
+            <div class="window-button">
+              <div class="tab">
+                <span>Creator</span>
+                <span>linkedin.exe</span>
+              </div>
+
+              <div class="window-content">
+                <a
+                  href="https://www.linkedin.com/in/martin-bocevski-535328201/"
+                  class="btn menuBtn"
+                  target="_blank"
+                  style="touch-action: auto !important"
+                >
+                  <span class="line-top"></span>
+                  <span class="line-bottom"></span>
+                  <div class="clip-body">
+                    <div class="border"></div>
+                    <span class="text">linkedin</span>
+                    <figure class="icon-wrapper">
+                      <svg
+                        width="24"
+                        height="24"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        xmlns="http://www.w3.org/2000/svg"
+                      >
+                        <path d="M10 17L16 12L10 7V17Z" fill="#DAFCFF" />
+                        <rect
+                          x="3.5"
+                          y="3.5"
+                          width="17"
+                          height="17"
+                          stroke="#DAFCFF"
+                        />
+                      </svg>
+                    </figure>
+                  </div>
+                </a>
+
+                <div class="sphere-wireframe">
+                  <div class="circle circle1"></div>
+                  <div class="circle circle2"></div>
+                  <div class="circle circle3"></div>
+                  <div class="ring"></div>
+                  <div class="circle circle4"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="featured-projects-section">
+        <div class="project-blocks">
+          <div class="project-block">
+            <figure class="background-wrapper">
+              <img src="./assets/purple-bg-img.png" alt="" />
+            </figure>
+          </div>
+        </div>
+      </section>
+
+      <section class="scrolling-view-section">
+        <div class="cta-block">
+          <figure class="background-wrapper">
+            <img src="./assets/purple-bg-img.png" alt="" />
+          </figure>
+          <div class="headline">
+            <span class="line"></span>
+            <h4 class="text-reveal">collection</h4>
+            <span class="line"></span>
+          </div>
+
+          <h2>Billerbeck</h2>
+
+          <p class="description">
+            Not just a duvet or a promise, but a LIFESTYLE!It symbolizes sleep
+            culture, quality of life, the joy of sleeping. Outstanding
+            price-value and performance ratio. Uncompromising, rigorous
+            first-class workmanship.
+          </p>
+
+          <a href="./pages/product.html" class="arrow-btn">
+            Explore more
+            <svg
+              width="20"
+              height="19"
+              viewBox="0 0 20 19"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.5929 10.3762H3.34277V8.31252H12.5929L8.47405 4.19364L9.94692 2.74023L16.5511 9.34439L9.94692 15.9485L8.47405 14.4951L12.5929 10.3762Z"
+                fill="#133654"
+              />
+            </svg>
+          </a>
+        </div>
+
+        <div class="cta-block cta-reverse">
+          <figure class="background-wrapper">
+            <img src="./assets/beige-bg-img.png" alt="" />
+          </figure>
+          <div class="headline">
+            <span class="line"></span>
+            <h4 class="text-reveal">collection</h4>
+            <span class="line"></span>
+          </div>
+
+          <figure class="heading-wrapper">
+            <img src="./assets/dreamline-img.png" alt="" />
+          </figure>
+
+          <p class="description">
+            Fresh, innovative, life-affirming, tastefully sensual, fashionable,
+            trendy. Attractive, elegant, noble, natural materials. An ideal
+            solution in the long term.Comfortable, casual, but still
+            disciplined.
+          </p>
+
+          <a href="./pages/product.html" class="arrow-btn">
+            Explore more
+            <svg
+              width="20"
+              height="19"
+              viewBox="0 0 20 19"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M12.5929 10.3762H3.34277V8.31252H12.5929L8.47405 4.19364L9.94692 2.74023L16.5511 9.34439L9.94692 15.9485L8.47405 14.4951L12.5929 10.3762Z"
+                fill="white"
+              />
+            </svg>
+          </a>
+        </div>
+      </section>
+
+      <section class="section-contact" id="contact">
+        <div class="left-block">
+          <h2>C0ntact ME F0R ANY FUTURE PR0JECTS Y0U HAVE IN MIND</h2>
+
+          <p class="description">
+            Interested in a new project, a collaboration, or to discuss creative
+            ideas over coffee or a beer, just send me an email.
+          </p>
+
+          <a href="mailto:martinbocevski@gmail.com" class="btn menuBtn">
+            <span class="line-top"></span>
+            <span class="line-bottom"></span>
+            <div class="clip-body">
+              <div class="border"></div>
+              <span class="text">martinbocevski@gmail.com</span>
+              <figure class="icon-wrapper">
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path d="M10 17L16 12L10 7V17Z" fill="#DAFCFF" />
+                  <rect
+                    x="3.5"
+                    y="3.5"
+                    width="17"
+                    height="17"
+                    stroke="#DAFCFF"
+                  />
+                </svg>
+              </figure>
+            </div>
+          </a>
+        </div>
+        <figure class="right-block">
+          <img src="../assets/three-folders.svg" alt="" />
         </figure>
-      </div>
-    </div>
+      </section>
+    </main>
+
+    {{>footer pathHome=".." }}
 
     <script type="module" src="../js/main.js"></script>
   </body>

@@ -1,7 +1,8 @@
 import "../styles/style.scss";
 import Lenis from "lenis";
 import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger.js";
+import { ScrollTrigger } from "gsap/all";
+import { SplitText } from "gsap/all";
 import { getTHREE } from "./THREE";
 import { getCounter } from "./counter.js";
 import { getMenu } from "./menu.js";
@@ -9,27 +10,39 @@ import { getDraggableElement } from "./draggable-element.js";
 import {
   getAboutContent,
   getCardStacking,
+  getGSAPSlider,
   getLoader,
   getSVGLineAnimation,
   scrollTypeText,
 } from "./animations.js";
 
-gsap.registerPlugin(ScrollTrigger);
+window.addEventListener("DOMContentLoaded", () => {
+  gsap.registerPlugin(ScrollTrigger, SplitText);
 
-// Initialize a new Lenis instance for smooth scrolling
-const lenis = new Lenis();
+  // Initialize a new Lenis instance for smooth scrolling
+  const lenis = new Lenis();
 
-// Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
-lenis.on("scroll", ScrollTrigger.update);
+  // Synchronize Lenis scrolling with GSAP's ScrollTrigger plugin
+  lenis.on("scroll", ScrollTrigger.update);
 
-// Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
-// This ensures Lenis's smooth scroll animation updates on each GSAP tick
-gsap.ticker.add((time) => {
-  lenis.raf(time * 1000); // Convert time from seconds to milliseconds
+  // Add Lenis's requestAnimationFrame (raf) method to GSAP's ticker
+  // This ensures Lenis's smooth scroll animation updates on each GSAP tick
+  gsap.ticker.add((time) => {
+    lenis.raf(time * 1000); // Convert time from seconds to milliseconds
+  });
+
+  // Disable lag smoothing in GSAP to prevent any delay in scroll animations
+  gsap.ticker.lagSmoothing(0);
+
+  if (document.querySelector(".slider-section")) {
+    getGSAPSlider();
+  }
+
+  if (document.querySelector(".section-skills")) {
+    getCardStacking();
+  }
+  ScrollTrigger.refresh();
 });
-
-// Disable lag smoothing in GSAP to prevent any delay in scroll animations
-gsap.ticker.lagSmoothing(0);
 
 if (document.querySelector(".loading-animation-container")) {
   getLoader();
@@ -58,14 +71,12 @@ if (document.querySelector(".section-about")) {
 }
 
 if (document.querySelector(".section-about")) {
-  getDraggableElement(".window-image", ".section-about");
-  getDraggableElement(".window-text", ".section-about");
-  getDraggableElement(".window-button", ".section-about");
+  if (window.innerWidth > 768) {
+    getDraggableElement(".window-image", ".section-about");
+    getDraggableElement(".window-text", ".section-about");
+    getDraggableElement(".window-button", ".section-about");
+  }
 }
 if (document.querySelector(".hero_section")) {
   getSVGLineAnimation();
-}
-
-if (document.querySelector(".section-skills")) {
-  getCardStacking();
 }

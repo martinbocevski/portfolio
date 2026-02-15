@@ -2,15 +2,17 @@ import gsap from "gsap";
 import * as THREE from "three";
 import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { TextPlugin } from "gsap/TextPlugin";
-import ScrollTrigger from "gsap/ScrollTrigger";
+import { ScrollTrigger } from "gsap/all";
 import ScrollToPlugin from "gsap/ScrollToPlugin";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader.js";
+// import { ScrollTrigger } from "gsap/all";
+import { SplitText } from "gsap/all";
 
 gsap.registerPlugin(
   MotionPathPlugin,
   TextPlugin,
   ScrollTrigger,
-  ScrollToPlugin
+  ScrollToPlugin,
 );
 
 export let loadedMesh = null;
@@ -77,7 +79,7 @@ export const getLoader = () => {
           counterElement.textContent = val;
           loaderInner.style.width = val + "%";
         },
-      }
+      },
     );
 
     // Code typing animation (requires TextPlugin)
@@ -88,7 +90,7 @@ export const getLoader = () => {
         duration: 3.5,
         ease: "none",
       },
-      "-=4.5"
+      "-=4.5",
     ); // overlaps typing with counter animation
 
     tl.to(transitionBlock, {
@@ -119,7 +121,7 @@ export const getLoader = () => {
       {
         display: "none",
       },
-      "<"
+      "<",
     );
 
     tl.to(
@@ -129,7 +131,7 @@ export const getLoader = () => {
         duration: 2,
         ease: "power2.inOut",
       },
-      "-=1.5"
+      "-=1.5",
     );
 
     if (leftLines) {
@@ -142,7 +144,7 @@ export const getLoader = () => {
             duration: 2,
             ease: "power2.inOut",
           },
-          "-=2"
+          "-=2",
         );
         tl.to(
           rightLines,
@@ -151,7 +153,7 @@ export const getLoader = () => {
             duration: 2,
             ease: "power2.inOut",
           },
-          "-=2"
+          "-=2",
         );
       });
     }
@@ -166,7 +168,7 @@ export const getLoader = () => {
             duration: 2,
             ease: "power2.inOut",
           },
-          "-=2"
+          "-=2",
         );
         tl.to(
           rightLines,
@@ -175,7 +177,7 @@ export const getLoader = () => {
             duration: 2,
             ease: "power2.inOut",
           },
-          "-=2"
+          "-=2",
         );
       });
     }
@@ -259,7 +261,7 @@ export const scrollTypeText = (target, targetHeading, text) => {
         once: true,
         // markers: true,
       },
-    }
+    },
   );
 };
 
@@ -286,18 +288,22 @@ export const getSVGLineAnimation = () => {
 };
 
 export const getCardStacking = () => {
+  let cards = gsap.utils.toArray(".card");
+  const pinDistance = (window.innerHeight * cards.length) / 2;
+
   let timeln = gsap.timeline({
     scrollTrigger: {
       trigger: ".section-skills",
       pin: true,
       pinSpacing: true,
       start: "top top",
-      end: "bottom 0%",
-      scrub: true,
+      // end: "bottom 0%",
+      end: `+=${pinDistance}px`,
+      scrub: 1,
     },
   });
 
-  let cards = gsap.utils.toArray(".card");
+  // console.log(cards.length);
 
   cards.forEach((card, i) => {
     let prevCard = cards[i - 1];
@@ -308,14 +314,275 @@ export const getCardStacking = () => {
       timeln.to(
         prevCard,
         { scale: 0.95, xPercent: -0.5, opacity: 0.5 },
-        "-=0.2"
+        "-=0.25",
       );
     }
 
     timeln.fromTo(
       card,
       { xPercent: 75, opacity: 0 },
-      { xPercent: 0, opacity: 1 }
+      { xPercent: 0, opacity: 1 },
     );
+  });
+};
+
+export const getGSAPSlider = () => {
+  gsap.registerPlugin(ScrollTrigger, SplitText);
+
+  const slides = [
+    {
+      title: "Euroconsumers",
+      description:
+        "Euroconsumers is a leading, independent, multinational consumer organization representing over 6 million people across Belgium, Italy, Portugal, Spain, and Brazil. It unites national consumer groups to defend consumer rights, provide innovative information/services, and promote fair, sustainable markets.",
+      image: "../assets/euro-hero.jpg",
+      page: "/portfolio/pages/euroconsumers.html",
+    },
+    {
+      title: "Vibefuel",
+      description:
+        "VibeFuel is a brand of plant-based, vegan nootropic supplements designed to enhance focus, energy, and cognitive performance.",
+      image: "../assets/vibe-hero.png",
+      page: "/portfolio/pages/vibefuel.html",
+    },
+    {
+      title: "TAT2 Spirits",
+      description:
+        "TAT2 Spirits is a New York-based brand offering premium, ready-to-drink (RTD) cocktails, primarily known for its sugar-free Kentucky Bourbon Old Fashioned.",
+      image: "../assets/tat2-spirits-cover.png",
+      page: "/portfolio/pages/tat2-spirits.html",
+    },
+    {
+      title: "Rackbeat",
+      description:
+        "Rackbeat is a cloud-based warehouse management system (WMS) and inventory management platform designed for small-to-medium-sized businesses (SMBs) in the Nordics.",
+      image: "../assets/Rackbeat-cover.png",
+      page: "/portfolio/pages/rackbeat.html",
+    },
+    {
+      title: "Vidde",
+      description:
+        "Vidde (Vidde Mobility) is a Swedish company that has developed the world's first circular electric snowmobile, known as the Alfa.",
+      image: "../assets/Vidde-cover.png",
+      page: "/portfolio/pages/vidde.html",
+    },
+    {
+      title: "ATV Dubrovnik",
+      description:
+        "ATV Dubrovnik is offering guided all-terrain vehicle (quad bike) safari tours in the countryside surrounding Dubrovnik, Croatia.",
+      image: "../assets/atv-buggy-hero.webp",
+      page: "/portfolio/pages/atv-dubrovnik.html",
+    },
+    {
+      title: "SIGRID",
+      description:
+        "Sigrid is a software assurance and quality analysis platform developed by the Software Improvement Group (SIG) to evaluate, monitor, and improve source code quality, security, and maintainability.",
+      image: "../assets/SIG-cover.png",
+      page: "/portfolio/pages/sigrid.html",
+    },
+    {
+      title: "Socially Powerful",
+      description:
+        "Socially Powerful is a global, data-driven influencer marketing and social agency founded in 2017 with offices in London, New York, Dubai, and Beijing.",
+      image: "../assets/socially-powerful-cover.png",
+      page: "/portfolio/pages/socially-powerful.html",
+    },
+  ];
+
+  const pinDistance = window.innerHeight * (slides.length - 1);
+  const progressBar = document.querySelector(".slider-progress");
+  const sliderImages = document.querySelector(".slider-images");
+  const sliderTitle = document.querySelector(".slider-title");
+  const sliderDescription = document.querySelector(".slider-description");
+  const sliderBtn = document.querySelector(".slider-btn");
+  const sliderIndices = document.querySelector(".slider-indices");
+
+  let activeSlide = 0;
+  let currentSplit = null;
+  let currentSplitTitle = null;
+
+  function createIndices() {
+    sliderIndices.innerHTML = "";
+
+    slides.forEach((_, index) => {
+      const indexNum = (index + 1).toString().padStart(2, "0");
+      const indicatorElement = document.createElement("p");
+      indicatorElement.dataset.index = index;
+      indicatorElement.innerHTML = `<span class="marker"></span><span class="index">${indexNum}</span>`;
+      sliderIndices.appendChild(indicatorElement);
+
+      if (index === 0) {
+        gsap.set(indicatorElement.querySelector(".index"), {
+          opacity: 1,
+          fontWeight: 600,
+        });
+        gsap.set(indicatorElement.querySelector(".marker"), {
+          scaleX: 1,
+        });
+      } else {
+        gsap.set(indicatorElement.querySelector(".index"), {
+          opacity: 0.7,
+          fontWeight: 400,
+        });
+        gsap.set(indicatorElement.querySelector(".marker"), {
+          scaleX: 0,
+        });
+      }
+    });
+  }
+
+  function animateNewSlide(index) {
+    const newSliderImage = document.createElement("img");
+    newSliderImage.src = slides[index].image;
+    newSliderImage.alt = `Slide ${index + 1}`;
+
+    gsap.set(newSliderImage, {
+      opacity: 0,
+      scale: 1.1,
+    });
+
+    sliderImages.appendChild(newSliderImage);
+
+    gsap.to(newSliderImage, {
+      opacity: 1,
+      duration: 0.5,
+      ease: "power2.out",
+    });
+
+    gsap.to(newSliderImage, {
+      scale: 1,
+      duration: 1,
+      ease: "power2.out",
+    });
+
+    const allImages = sliderImages.querySelectorAll("img");
+    if (allImages.length > 3) {
+      const removeCount = allImages.length - 3;
+      for (let i = 0; i < removeCount; i++) {
+        sliderImages.removeChild(allImages[i]);
+      }
+    }
+
+    animateNewTitle(index);
+    animateIndicators(index);
+  }
+
+  function animateIndicators(index) {
+    const indicators = sliderIndices.querySelectorAll("p");
+
+    indicators.forEach((indicator, i) => {
+      const markerElement = indicator.querySelector(".marker");
+      const indexElement = indicator.querySelector(".index");
+
+      if (i === index) {
+        gsap.to(indexElement, {
+          opacity: 1,
+          textShadow: "0px 0px 5px #fff",
+          fontWeight: 600,
+          duration: 0.3,
+          ease: "power2.out",
+        });
+
+        gsap.to(markerElement, {
+          scaleX: 1,
+          boxShadow: "0px 0px 5px #fff",
+          duration: 0.3,
+          ease: "power2.out",
+        });
+      } else {
+        gsap.to(indexElement, {
+          opacity: 0.7,
+          textShadow: "0px 0px 0px #fff",
+          fontWeight: 400,
+          duration: 0.3,
+          ease: "power2.out",
+        });
+
+        gsap.to(markerElement, {
+          scaleX: 0,
+          boxShadow: "0px 0px 0px #fff",
+          duration: 0.3,
+          ease: "power2.out",
+        });
+      }
+    });
+  }
+
+  function animateNewTitle(index) {
+    if (currentSplit) {
+      currentSplit.revert();
+    }
+    if (currentSplitTitle) {
+      currentSplitTitle.revert();
+    }
+
+    sliderTitle.innerHTML = `
+    <h2>${slides[index].title}</h2>`;
+    sliderDescription.innerHTML = `
+    <p>${slides[index].description}</p>`;
+    sliderBtn.setAttribute(
+      "href",
+      `
+    ${slides[index].page}`,
+    );
+
+    currentSplitTitle = new SplitText(sliderTitle.querySelector("h2"), {
+      type: "lines",
+      linesClass: "line",
+      mask: "lines",
+    });
+    currentSplit = new SplitText(sliderDescription.querySelector("p"), {
+      type: "lines",
+      linesClass: "line",
+      mask: "lines",
+    });
+
+    gsap.set(currentSplit.lines, {
+      yPercent: 100,
+      opacity: 0,
+    });
+
+    gsap.to(currentSplit.lines, {
+      yPercent: 0,
+      opacity: 1,
+      duration: 0.75,
+      stagger: 0.1,
+      ease: "power3.out",
+    });
+
+    gsap.set(currentSplitTitle.lines, {
+      yPercent: 100,
+      opacity: 0,
+    });
+
+    gsap.to(currentSplitTitle.lines, {
+      yPercent: 0,
+      opacity: 1,
+      duration: 0.75,
+      stagger: 0.1,
+      ease: "power3.out",
+    });
+  }
+
+  createIndices();
+
+  ScrollTrigger.create({
+    trigger: ".slider-section",
+    start: "top top",
+    end: `+=${pinDistance}px`,
+    scrub: 1,
+    pin: true,
+    pinSpacing: true,
+    onUpdate: (self) => {
+      gsap.set(progressBar, {
+        scaleY: self.progress,
+      });
+
+      const currentSlide = Math.floor(self.progress * slides.length);
+
+      if (activeSlide !== currentSlide && currentSlide < slides.length) {
+        activeSlide = currentSlide;
+        animateNewSlide(activeSlide);
+      }
+    },
   });
 };
