@@ -322,7 +322,7 @@ export const getCardStacking = () => {
     if (prevCard) {
       timeln.to(
         prevCard,
-        { scale: 0.95, xPercent: -0.5, opacity: 0.5 },
+        { scale: 0.95, xPercent: -0.5, opacity: 1 },
         "-=0.25",
       );
     }
