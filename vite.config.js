@@ -19,10 +19,11 @@ export default defineConfig({
         sigrid: resolve(__dirname, "src/pages/sigrid.html"),
         sociallyPowerful: resolve(
           __dirname,
-          "src/pages/socially-powerful.html"
+          "src/pages/socially-powerful.html",
         ),
         vibefuel: resolve(__dirname, "src/pages/vibefuel.html"),
         vidde: resolve(__dirname, "src/pages/vidde.html"),
+        tatTwoSpirits: resolve(__dirname, "src/pages/tat2-spirits.html"),
       },
     },
     outDir: "../build",
